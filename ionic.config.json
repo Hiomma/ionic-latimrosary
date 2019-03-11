@@ -1,5 +1,7 @@
 {
   "name": "TercoLatitim",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

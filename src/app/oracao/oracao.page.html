@@ -1,0 +1,20 @@
+<ion-content padding class="contentOracao">
+
+    <p class="pTitulo">Orações em Latim</p>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col size="6" *ngFor="let aux of listOracoes">
+                <div class="divOracao" (click)="abrirOracao(aux)">
+                    <img class="imagem" [src]="aux.imagem">
+                    <p class="pNome">
+                        {{aux.nomeLatim}}
+                    </p>
+                    <p class="pDescricao">
+                        {{aux.nome}}
+                    </p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

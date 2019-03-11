@@ -8,16 +8,31 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { TercosService } from 'src/services/tercos/tercos.service';
+import { OracoesService } from 'src/services/oracoes/oracoes.service';
+import { MisteriosService } from 'src/services/misterios/misterios.service';
+import { NavService } from 'src/services/nav/nav.service'
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    entryComponents: [],
+    imports: [BrowserModule,
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFirestoreModule,
+        IonicModule.forRoot(),
+        AppRoutingModule],
+    providers: [
+        StatusBar,
+        SplashScreen,
+        OracoesService,
+        TercosService,
+        MisteriosService,
+        NavService,
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    ],
+    bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

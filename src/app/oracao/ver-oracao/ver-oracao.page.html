@@ -1,0 +1,14 @@
+<ion-content padding class="contentOracao">
+    <div class="divContent">
+        <p class="pTitulo">{{oracao?.nomeLatim}}</p>
+        <p class="pSubtitulo">{{oracao?.nome}}</p>
+
+        <div class="divOracao">
+            <p class="pOracao" [innerHTML]="oracao?.oracaoLatim"></p>
+        </div>
+    </div>
+    <div class="divVoltar" (click)="voltar()">
+        <p class="pVoltar">Voltar</p>
+        <ion-icon style="float: right; margin-right: 5px;" name="ios-arrow-dropleft-circle"></ion-icon>
+    </div>
+</ion-content>

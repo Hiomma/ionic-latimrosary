@@ -1,0 +1,34 @@
+<ion-content padding class="contentOracao">
+    <div class="divContent">
+        <div *ngIf="contadorSinalCruz == 0">
+            <p class="pTitulo">{{terco?.nomeLatim}}</p>
+            <p class="pSubtitulo">{{terco?.nome}}</p>
+
+            <p class="pSubtitulo" style="margin-top: 20px">{{oracao?.nomeLatim}}</p>
+        </div>
+
+        <div *ngIf="contadorSinalCruz != 0">
+            <p class="pTitulo">{{oracao?.nomeLatim}}</p>
+            <p class="pSubtitulo">{{oracao?.nome}}</p>
+        </div>
+
+        <div class="divOracao">
+            <p class="pOracao" [innerHTML]="oracao?.oracaoLatim"></p>
+        </div>
+
+        <div class="divOracao" *ngIf="misterioPt">
+            <p class="pOracao" [innerHTML]="misterioPt"></p>
+        </div>
+    </div>
+
+    <ion-grid class="gridTerco">
+        <ion-row>
+            <ion-col>
+                <ion-button class="buttonTerco" (click)="voltar()">Voltar</ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button class="buttonTerco" (click)="avancar()">Avançar</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
