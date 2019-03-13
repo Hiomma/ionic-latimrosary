@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Doe</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding class="contentTerco">
 
-<ion-content padding>
+    <p class="pTitulo">Doação</p>
 
+    <div class="divVoltar" (click)="voltar()">
+        <p class="pVoltar">Voltar</p>
+        <ion-icon style="float: right; margin-right: 5px;" name="ios-arrow-dropleft-circle"></ion-icon>
+    </div>
+
+    <div class="divDoacao">
+        <p class="pTexto">Sua doação é muito importante para a continuação do projeto, visto que houve custos para o
+            desenvolvimento. Além disso, outros projetos podem ser feitos com a sua doação! Além desse projeto, estamos
+            com
+            um canal no YouTube para ajudar todas as pessoas a rezarem corretamente e entenderem com maior profundidade
+            a
+            Doutrina Católica!
+            Agradeço muito por você ter lido esse texto e que Deus te abençoa, faça um ótimo proveito do
+            aplicativo!
+            <br><br>
+            Cliando no botão de "Doar", você será redirecionado para o site do PayPal, onde recolhemos a sua doação. Lá
+            você
+            pode doar qualquer valor sem nenhum compromisso e totalmente anônimo!
+        </p>
+    </div>
+
+    <div class="divBotao">
+        <ion-button (click)="abrirUrl()" class="buttonDoar"> Doar </ion-button>
+    </div>
 </ion-content>

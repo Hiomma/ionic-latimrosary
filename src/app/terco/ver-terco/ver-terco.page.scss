@@ -2,13 +2,17 @@
     --background: var(--background-escuro);
 }
 
-.gridTerco{
+.titulo{
+    width: 100%;
     position: absolute;
-    bottom: 20px;
-    width: 90%;
+    top: 10px;
 }
 
-.buttonTerco{
+.barra {
+    --background: var(--background-claro) !important;
+}
+
+.buttonTerco {
     width: 100%;
     --background: var(--background-claro);
     font-weight: bolder;
@@ -22,7 +26,7 @@
     float: right;
 }
 
-.divOracao{
+.divOracao {
     position: relative;
     border: 1px solid var(--borda-escura);
     border-radius: 10px;
@@ -33,7 +37,7 @@
     background: var(--background-claro);
 }
 
-.pVoltar{
+.pVoltar {
     float: right;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -43,11 +47,41 @@
     padding-left: 10px;
 }
 
+.divContador{
+    color: white;
+    font-weight: bold;
+    position: relative;
+    border: 1px solid var(--borda-escura);
+    border-radius: 10px;
+    margin-top: 5px;
+    text-align: center;
+    background: var(--background-claro);
+}
+
+.pTituloTerco {
+    color: white;
+    font-weight: bolder;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: center;
+}
+
+.pSubtituloTerco{
+    color: white;
+    font-weight: 100;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: center;
+    font-size: 15px;
+}
+
 .pTitulo {
     color: #fff;
     font-weight: bolder;
     font-size: 35px;
+    margin-block-start: 0em;
     margin-block-end: 0em;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -64,4 +98,13 @@
     color: white;
     margin-block-start: 0em;
     margin-block-end: 0em;
+}
+
+.pTraducao{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-top: 20px;
 }

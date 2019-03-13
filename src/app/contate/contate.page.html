@@ -1,9 +1,38 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Contate</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding class="contentTerco">
 
-<ion-content padding>
+    <p class="pTitulo">Contate-nos</p>
 
+    <div class="divVoltar" (click)="voltar()">
+        <p class="pVoltar">Voltar</p>
+        <ion-icon style="float: right; margin-right: 5px;" name="ios-arrow-dropleft-circle"></ion-icon>
+    </div>
+
+    <div class="divDoacao">
+        <p class="pTexto">Para sugestões, reclamações ou qualquer outro tipo de assunto, por favor, entre em contato no
+            e-mail: <b>gabrielf2@live.com</b>. É muito importante esse contato para nós, para o aplicativo ter constante
+            evolução!
+        </p>
+    </div>
+
+    <p class="pTitulo" style="margin-block-end: 0em;">Rede Sociais</p>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col style="justify-content: center; display: flex;"> 
+                <ion-button class="buttonRede" (click)="abrirRedeSocial('https://www.facebook.com/Gabriel.Hitsugaya.Sereno?ref=bookmarks')">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </ion-button>
+            </ion-col>
+            <ion-col style="justify-content: center; display: flex;">
+                <ion-button class="buttonRede" (click)="abrirRedeSocial('https://www.instagram.com/gaelf2/')">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </ion-button>
+            </ion-col>
+            <ion-col style="justify-content: center; display: flex;">
+                <ion-button class="buttonRede" (click)="abrirRedeSocial('youtube')">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

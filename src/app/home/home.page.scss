@@ -4,6 +4,45 @@
     font-weight: bolder;
 }
 
+.divIcone{
+    display: flex;
+    justify-content: center;
+}
+
+.gridBotoes{
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+}
+
+.imgIcone {
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+}
+
 .contentOracao {
-    --background: var(--background-escuro);
+    background: url(../../assets/imgs/background.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 100%;
+    background-size: cover;
+}
+
+.pCreditos {
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    font-size: 10px;
+    width: 150px;
+    border-radius: 25px;
+    border: 1px solid var(--borda-escura);
+    background: var(--background-claro);
+}
+
+.divCreditos {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }

@@ -6,21 +6,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { VerTercoPage } from './ver-terco.page';
+import { MenuTercoComponent } from 'src/app/menu-terco/menu-terco.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: VerTercoPage
-  }
+    {
+        path: '',
+        component: VerTercoPage
+    }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [VerTercoPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes)
+    ],
+    declarations: [VerTercoPage, MenuTercoComponent],
+    entryComponents: [MenuTercoComponent]
 })
-export class VerTercoPageModule {}
+export class VerTercoPageModule { }

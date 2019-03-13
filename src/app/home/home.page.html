@@ -1,13 +1,25 @@
-<ion-content class="contentOracao">
-    <ion-grid class="gridBotoes">
-        <ion-row style="justify-content: center;">
-            <ion-button class="bottonMenu" (click)="abrirPagina('tab')">Rezar</ion-button>
-        </ion-row>
-        <!-- <ion-row style="justify-content: center;">
-            <ion-button class="bottonMenu" (click)="abrirPagina('contate')">Contate-nos</ion-button>
-        </ion-row>
-        <ion-row style="justify-content: center;">
-            <ion-button class="bottonMenu" (click)="abrirPagina('doe')">Doe!</ion-button>
-        </ion-row> -->
-    </ion-grid>
+<ion-content>
+    <div class="contentOracao">
+
+        <div class="divIcone">
+            <img src="../../assets/icon/icone.png" alt="Icone Cruz" class="imgIcone">
+        </div>
+
+        <ion-grid class="gridBotoes">
+            <ion-row style="justify-content: center;">
+                <ion-button class="bottonMenu" (click)="abrirPagina('tab')">Rezar</ion-button>
+            </ion-row>
+            <ion-row style="justify-content: center;">
+                <ion-button class="bottonMenu" (click)="abrirPagina('contate')">Contate-nos</ion-button>
+            </ion-row>
+            <ion-row style="justify-content: center;">
+                <ion-button class="bottonMenu" (click)="abrirPagina('doe')">Doe!</ion-button>
+            </ion-row>
+            <ion-row>
+                <div class="divCreditos">
+                    <p class="pCreditos">Feito por Gabriel Sereno gabrielf2@live.com</p>
+                </div>
+            </ion-row>
+        </ion-grid>
+    </div>
 </ion-content>

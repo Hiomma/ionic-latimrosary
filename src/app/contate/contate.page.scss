@@ -1,0 +1,57 @@
+.contentTerco {
+    --background: var(--background-escuro);
+}
+
+.divVoltar{
+    position: absolute;
+    right: 10px;
+    top: 53px;
+    width: 70px;
+    overflow: hidden;
+    color: white;
+}
+
+.buttonRede{
+    --background: var(--background-claro);
+    --border-radius: 50% !important;
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+}
+
+.pVoltar{
+    float: left;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.pTitulo {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.divDoacao {
+    position: relative;
+    border: 1px solid var(--borda-escura);
+    border-radius: 10px;
+    text-align: center;
+    background: var(--background-claro);
+    text-align: justify;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.buttonDoar {
+    --background: var(--background-claro);
+    font-weight: bolder;
+    width: 300px;
+}
+
+.divBotao{
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+}

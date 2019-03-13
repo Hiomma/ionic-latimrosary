@@ -1,0 +1,14 @@
+<ion-list>
+    <ion-item>
+        <ion-label>Tradução</ion-label>
+        <ion-toggle class="toggleOpcao" [(ngModel)]="traducao"></ion-toggle>
+    </ion-item>
+    <ion-item>
+        <ion-label>Reproduzir Aut.</ion-label>
+        <ion-toggle class="toggleOpcao" [(ngModel)]="reproduzir"></ion-toggle>
+    </ion-item>
+    <ion-item (click)="sair()">
+        <ion-label>Sair do Terço</ion-label>
+    </ion-item>
+</ion-list>
+<ion-button class="buttonOk" (click)="ok()">Ok</ion-button>
