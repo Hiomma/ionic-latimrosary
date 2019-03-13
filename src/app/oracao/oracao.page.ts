@@ -24,7 +24,6 @@ export class OracaoPage implements OnInit {
 
     abrirOracao(aux){
         this.nav.data = aux;
-        console.log(aux);
         this.router.navigateByUrl('/ver-oracao');
     }
 

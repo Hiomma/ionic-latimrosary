@@ -15,6 +15,7 @@ import { TercosService } from 'src/services/tercos/tercos.service';
 import { OracoesService } from 'src/services/oracoes/oracoes.service';
 import { MisteriosService } from 'src/services/misterios/misterios.service';
 import { NavService } from 'src/services/nav/nav.service'
+import { Media } from '@ionic-native/media/ngx';
 
 @NgModule({
     declarations: [AppComponent],
@@ -31,6 +32,7 @@ import { NavService } from 'src/services/nav/nav.service'
         TercosService,
         MisteriosService,
         NavService,
+        Media,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ],
     bootstrap: [AppComponent]
