@@ -4,8 +4,12 @@
         <ion-toggle class="toggleOpcao" [(ngModel)]="traducao"></ion-toggle>
     </ion-item>
     <ion-item>
+        <ion-label>Áudio da Oração</ion-label>
+        <ion-toggle class="toggleOpcao" [(ngModel)]="audio"></ion-toggle>
+    </ion-item>
+    <ion-item *ngIf="terco">
         <ion-label>Reproduzir Aut.</ion-label>
-        <ion-toggle class="toggleOpcao" [(ngModel)]="reproduzir"></ion-toggle>
+        <ion-toggle class="toggleOpcao" [disabled]="!audio" [(ngModel)]="reproduzir"></ion-toggle>
     </ion-item>
     <ion-item (click)="sair()">
         <ion-label>Sair do Terço</ion-label>

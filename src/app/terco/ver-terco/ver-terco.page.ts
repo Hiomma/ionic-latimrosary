@@ -3,8 +3,9 @@ import { NavService } from 'src/services/nav/nav.service';
 import { Router } from '@angular/router';
 import { OracoesService } from 'src/services/oracoes/oracoes.service';
 import { MisteriosService } from 'src/services/misterios/misterios.service';
-import { PopoverController } from '@ionic/angular';
+import { PopoverController, Platform } from '@ionic/angular';
 import { MenuTercoComponent } from "../../menu-terco/menu-terco.component";
+import { MediaObject, Media } from '@ionic-native/media/ngx';
 
 @Component({
     selector: 'app-ver-terco',
@@ -36,11 +37,20 @@ export class VerTercoPage implements OnInit {
 
     traducao: boolean = false;
     reproduzir: boolean = false;
+    audio: boolean = false;
+
+    play: boolean = false;
+    duracao: number;
+    tempoMusica: number;
+
+    musica: MediaObject;
 
     constructor(private nav: NavService,
         private router: Router,
         private misterios: MisteriosService,
         private popoverController: PopoverController,
+        private platform: Platform,
+        private media: Media,
         private oracoes: OracoesService) { }
 
     ngOnInit() {
@@ -78,13 +88,44 @@ export class VerTercoPage implements OnInit {
                     }
                 });
                 this.oracao = this.sinalDaCruz;
+
+                this.platform.ready().then(() => {
+
+                    this.musica = this.media.create("/android_asset/www/music/" + this.oracao.audio);
+                    this.musica.play();
+                    this.musica.pause();
+                })
             })
         })
 
     }
 
+    avancarMusica() {
+        this.musica.seekTo(this.tempoMusica * 1000);
+    }
+
+    ativarPlay() {
+        this.play = !this.play;
+
+        if (this.play) {
+            this.musica.play();
+            this.duracao = this.musica.getDuration();
+
+            setInterval(() => {
+                this.musica.getCurrentPosition().then(data => {
+                    this.tempoMusica = data;
+                    if (this.tempoMusica < 0) {
+                        this.play = false;
+                    }
+                })
+            }, 1000);
+        } else {
+            this.musica.pause();
+        }
+    }
+
     async abrirPopover(ev: any) {
-        this.nav.dataModal = { reproduzir: this.reproduzir, traducao: this.traducao }
+        this.nav.dataModal = { reproduzir: this.reproduzir, traducao: this.traducao, audio: this.audio, terco: true }
 
         const popover = await this.popoverController.create({
             component: MenuTercoComponent,
@@ -95,10 +136,10 @@ export class VerTercoPage implements OnInit {
         popover.onDidDismiss().then(() => {
             this.traducao = this.nav.dataModal.traducao;
             this.reproduzir = this.nav.dataModal.reproduzir;
+            this.audio = this.nav.dataModal.audio;
         });
 
         return await popover.present();
-
     }
 
     avancar() {
@@ -150,6 +191,18 @@ export class VerTercoPage implements OnInit {
         } else if (this.i == 79) {
             this.tercoFinalizado = true;
         }
+
+        this.platform.ready().then(() => {
+            this.play = false;
+            this.tempoMusica = 0;
+            this.musica = this.media.create("/android_asset/www/music/" + this.sinalDaCruz.audio);
+            this.musica.play();
+            this.musica.pause();
+
+            if (this.reproduzir) {
+                this.ativarPlay();
+            }
+        })
     }
 
     voltar() {

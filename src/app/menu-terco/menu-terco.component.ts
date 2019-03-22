@@ -12,6 +12,8 @@ export class MenuTercoComponent implements OnInit {
 
     reproduzir: boolean;
     traducao: boolean;
+    audio: boolean;
+    terco: boolean;
 
     constructor(private popCtrl: PopoverController,
         private router: Router,
@@ -21,10 +23,12 @@ export class MenuTercoComponent implements OnInit {
     ngOnInit() {
         this.reproduzir = this.nav.dataModal.reproduzir;
         this.traducao = this.nav.dataModal.traducao;
+        this.audio = this.nav.dataModal.audio;
+        this.terco = this.nav.dataModal.terco;
     }
 
     ok() {
-        this.nav.dataModal = { reproduzir: this.reproduzir, traducao: this.traducao }
+        this.nav.dataModal = { reproduzir: this.reproduzir, traducao: this.traducao, audio: this.audio }
         this.popCtrl.dismiss();
     }
 

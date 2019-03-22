@@ -2,6 +2,30 @@
     --background: var(--background-escuro);
 }
 
+.barra {
+    --background: var(--background-claro) !important;
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+    font-weight: bolder;
+    width: 100%;
+    position: absolute;
+    bottom: 15px;
+}
+
+.iconePlayer {
+    margin-left: 15px;
+    color: white;
+}
+
+.rangePlayer {
+    padding-top: 0;
+    padding-bottom: 0;
+    --bar-background-active: white;
+}
+
 .divVoltar {
     margin-top: 10px;
     color: white;
@@ -10,7 +34,7 @@
     float: right;
 }
 
-.divOracao{
+.divOracao {
     position: relative;
     border: 1px solid var(--borda-escura);
     border-radius: 10px;
@@ -21,7 +45,7 @@
     background: var(--background-claro);
 }
 
-.pVoltar{
+.pVoltar {
     float: right;
     margin-block-start: 0em;
     margin-block-end: 0em;
@@ -52,4 +76,13 @@
     color: white;
     margin-block-start: 0em;
     margin-block-end: 0em;
+}
+
+.pTraducao {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-top: 20px;
 }

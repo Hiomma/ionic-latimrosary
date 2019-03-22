@@ -24,7 +24,6 @@ export class TercoPage implements OnInit {
 
     abrirTerco(aux){
         this.nav.data = aux;
-        console.log(aux);
         this.router.navigateByUrl("/ver-terco");
     }
 

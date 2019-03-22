@@ -1,3 +1,18 @@
+<ion-header>
+
+    <ion-toolbar class="barra">
+        <ion-title class="titulo">
+            Oração
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="abrirPopover($event)">
+                <ion-icon slot="icon-only" style="margin-right: 10px; color: white;" name="menu"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+</ion-header>
+
 <ion-content padding class="contentOracao">
     <div class="divContent">
         <p class="pTitulo">{{oracao?.nomeLatim}}</p>
@@ -6,9 +21,23 @@
         <div class="divOracao">
             <p class="pOracao" [innerHTML]="oracao?.oracaoLatim"></p>
         </div>
+
+        <p *ngIf="traducao" class="pTraducao">Tradução</p>
+        <div class="divOracao" style="margin-top: 0" *ngIf="traducao">
+            <p class="pOracao" [innerHTML]="oracao?.oracao"></p>
+        </div>
     </div>
     <div class="divVoltar" (click)="voltar()">
         <p class="pVoltar">Voltar</p>
         <ion-icon style="float: right; margin-right: 5px;" name="ios-arrow-dropleft-circle"></ion-icon>
     </div>
 </ion-content>
+
+<ion-footer *ngIf="audio">
+    <ion-item style="--background: var(--background-escuro);">
+        <ion-icon class="iconePlayer" slot="start" name="play" *ngIf="!play" (click)="ativarPlay()"></ion-icon>
+        <ion-icon class="iconePlayer" slot="start" name="pause" *ngIf="play" (click)="ativarPlay()"></ion-icon>
+        <ion-range min="0" [max]="duracao" (ngModelChange)="avancarMusica()" [(ngModel)]="tempoMusica"
+            class="rangePlayer"></ion-range>
+    </ion-item>
+</ion-footer>

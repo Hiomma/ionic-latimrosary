@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-import { IonicModule, NavParams } from '@ionic/angular';
+import { IonicModule } from '@ionic/angular';
 
 import { VerOracaoPage } from './ver-oracao.page';
+import { MenuTercoComponent } from 'src/app/menu-terco/menu-terco.component';
 
 const routes: Routes = [
     {
@@ -21,6 +22,7 @@ const routes: Routes = [
         IonicModule,
         RouterModule.forChild(routes)
     ],
-    declarations: [VerOracaoPage]
+    declarations: [VerOracaoPage, MenuTercoComponent],
+    entryComponents: [MenuTercoComponent]
 })
 export class VerOracaoPageModule { }
