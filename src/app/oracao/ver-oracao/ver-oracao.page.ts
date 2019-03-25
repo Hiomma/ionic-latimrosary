@@ -3,7 +3,7 @@ import { NavService } from 'src/services/nav/nav.service';
 import { Router } from '@angular/router';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
 import { Platform, PopoverController } from '@ionic/angular';
-import { MenuTercoComponent } from 'src/app/menu-terco/menu-terco.component';
+import { MenuTercoComponent } from 'src/app/components/menu-terco/menu-terco.component';
 
 @Component({
     selector: 'app-ver-oracao',
@@ -88,6 +88,7 @@ export class VerOracaoPage implements OnInit {
     }
 
     voltar() {
+        this.musica.pause();
         this.router.navigateByUrl("/tab/oracao")
     }
 

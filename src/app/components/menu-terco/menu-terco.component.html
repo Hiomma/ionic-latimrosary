@@ -11,7 +11,7 @@
         <ion-label>Reproduzir Aut.</ion-label>
         <ion-toggle class="toggleOpcao" [disabled]="!audio" [(ngModel)]="reproduzir"></ion-toggle>
     </ion-item>
-    <ion-item (click)="sair()">
+    <ion-item (click)="sair()" *ngIf="terco">
         <ion-label>Sair do Terço</ion-label>
     </ion-item>
 </ion-list>

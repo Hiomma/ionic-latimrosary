@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { VerOracaoPage } from './ver-oracao.page';
-import { MenuTercoComponent } from 'src/app/menu-terco/menu-terco.component';
 
 const routes: Routes = [
     {
@@ -22,7 +21,6 @@ const routes: Routes = [
         IonicModule,
         RouterModule.forChild(routes)
     ],
-    declarations: [VerOracaoPage, MenuTercoComponent],
-    entryComponents: [MenuTercoComponent]
+    declarations: [VerOracaoPage],
 })
 export class VerOracaoPageModule { }

@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NavService } from 'src/services/nav/nav.service';
 import { Router } from '@angular/router';
 import { OracoesService } from 'src/services/oracoes/oracoes.service';
 import { MisteriosService } from 'src/services/misterios/misterios.service';
 import { PopoverController, Platform } from '@ionic/angular';
-import { MenuTercoComponent } from "../../menu-terco/menu-terco.component";
 import { MediaObject, Media } from '@ionic-native/media/ngx';
+import { MenuTercoComponent } from 'src/app/components/menu-terco/menu-terco.component';
 
 @Component({
     selector: 'app-ver-terco',
     templateUrl: './ver-terco.page.html',
     styleUrls: ['./ver-terco.page.scss'],
 })
-export class VerTercoPage implements OnInit {
+export class VerTercoPage implements OnInit, OnDestroy {
 
     terco: any;
     oracao: any;
@@ -42,6 +42,8 @@ export class VerTercoPage implements OnInit {
     play: boolean = false;
     duracao: number;
     tempoMusica: number;
+
+    interval: any;
 
     musica: MediaObject;
 
@@ -90,6 +92,10 @@ export class VerTercoPage implements OnInit {
                 this.oracao = this.sinalDaCruz;
 
                 this.platform.ready().then(() => {
+                    this.platform.backButton.subscribe(() => {
+                        clearInterval(this.interval);
+                        this.router.navigateByUrl("/tab/terco");
+                    });
 
                     this.musica = this.media.create("/android_asset/www/music/" + this.oracao.audio);
                     this.musica.play();
@@ -100,6 +106,15 @@ export class VerTercoPage implements OnInit {
 
     }
 
+    ngOnDestroy() {
+        this.musica.stop();
+        this.duracao = -1;
+        this.tempoMusica = 0;
+        this.reproduzir = false;
+        this.audio = false;
+        this.traducao = false;
+    }
+
     avancarMusica() {
         this.musica.seekTo(this.tempoMusica * 1000);
     }
@@ -108,14 +123,40 @@ export class VerTercoPage implements OnInit {
         this.play = !this.play;
 
         if (this.play) {
-            this.musica.play();
-            this.duracao = this.musica.getDuration();
+            if (this.reproduzir) {
+                setTimeout(() => {
+                    this.musica.setVolume(0.0);
+                    this.musica.play();
+                    this.interval = setInterval(() => {
+                        if (this.duracao == -1 || !this.duracao) {
+                            this.duracao = this.musica.getDuration();
+                        } else {
+                            this.musica.stop();
+                            this.musica.setVolume(1.0);
+                            this.musica.play();
+                            clearInterval(this.interval);
+                        }
+                    }, 10);
+                }, 2000);
+            } else {
+                this.musica.play();
+                this.duracao = this.musica.getDuration();
+            }
 
-            setInterval(() => {
+            let musicaInterval = setInterval(() => {
                 this.musica.getCurrentPosition().then(data => {
                     this.tempoMusica = data;
+
+                    console.log(this.duracao, this.tempoMusica);
+
                     if (this.tempoMusica < 0) {
                         this.play = false;
+
+                        clearInterval(musicaInterval);
+
+                        if (this.reproduzir) {
+                            this.avancar();
+                        }
                     }
                 })
             }, 1000);
@@ -195,7 +236,8 @@ export class VerTercoPage implements OnInit {
         this.platform.ready().then(() => {
             this.play = false;
             this.tempoMusica = 0;
-            this.musica = this.media.create("/android_asset/www/music/" + this.sinalDaCruz.audio);
+            this.duracao = -1;
+            this.musica = this.media.create("/android_asset/www/music/" + this.oracao.audio);
             this.musica.play();
             this.musica.pause();
 
@@ -207,6 +249,13 @@ export class VerTercoPage implements OnInit {
 
     voltar() {
         this.i--;
+
+        if (this.musica) {
+            this.musica.pause();
+            this.duracao = -1;
+            this.tempoMusica = 0;
+        }
+
         if (this.i == -1) {
             this.router.navigateByUrl("/tab/terco");
         } else {
@@ -278,6 +327,19 @@ export class VerTercoPage implements OnInit {
             } else if (this.i == 79) {
                 this.tercoFinalizado = true;
             }
+
+            this.platform.ready().then(() => {
+                this.play = false;
+                this.tempoMusica = 0;
+                this.duracao = -1;
+                this.musica = this.media.create("/android_asset/www/music/" + this.oracao.audio);
+                this.musica.play();
+                this.musica.pause();
+
+                if (this.reproduzir) {
+                    this.ativarPlay();
+                }
+            })
         }
     }
 }
