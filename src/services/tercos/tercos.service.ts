@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 export interface Terco {
     id?: string;
@@ -16,41 +14,51 @@ export interface Terco {
 })
 export class TercosService {
 
-    private tercosCollection: AngularFirestoreCollection<Terco>;
+    private tercos: any = new Array;
 
-    private tercos: Observable<Terco[]>;
 
-    constructor(db: AngularFirestore) {
-        this.tercosCollection = db.collection<Terco>('tercos');
+    constructor() {
 
-        this.tercos = this.tercosCollection.snapshotChanges().pipe(
-            map(actions => {
-                return actions.map(a => {
-                    const data = a.payload.doc.data();
-                    const id = a.payload.doc.id;
-                    return { id, ...data };
-                });
-            })
-        );
+
+        this.tercos.push(
+            {
+                descricao: "Qua/Dom",
+                id: "B8whCeNXQ8A0GjximZLH",
+                imagem: "assets/imgs/coracao.svg",
+                nome: "Mistérios Gloriosos",
+                nomeLatim: "Mysteria Gloriosa",
+                nomeSimplificado: "Mist. Gloriosos",
+            },
+            {
+                descricao: "Ter/Sex",
+                id: "QZnOa2BlN7QfNo7Wk2K7",
+                imagem: "assets/imgs/cruz.svg",
+                nome: "Mistérios Dolorosos",
+                nomeLatim: "Mysteria Dolorosa",
+                nomeSimplificado: "Mist. Dolorosos",
+            },
+            {
+                descricao: "Qui",
+                id: "QkFcWQqSh98hIpkzSTYN",
+                imagem: "assets/imgs/eucaristia.svg",
+                nome: "Mistérios Luminosos",
+                nomeLatim: "Mysteria Luminosa",
+                nomeSimplificado: "Mist. Luminosos",
+            },
+            {
+                descricao: "Seg/Sáb",
+                id: "tAsMFi6KvGxyC7kAyht2",
+                imagem: "assets/imgs/nascimento.svg",
+                nome: "Mistérios Gozosos",
+                nomeLatim: "Mysteria Gaudiosa",
+                nomeSimplificado: "Mist. Gozosos",
+            }
+        )
     }
 
     getTercos() {
-        return this.tercos;
-    }
-
-    getTerco(id) {
-        return this.tercosCollection.doc<Terco>(id).valueChanges();
-    }
-
-    updateTerco(terco: Terco, id: string) {
-        return this.tercosCollection.doc(id).update(terco);
-    }
-
-    addTerco(terco: Terco) {
-        return this.tercosCollection.add(terco);
-    }
-
-    removeTerco(id) {
-        return this.tercosCollection.doc(id).delete();
+        return new Observable((observer) => {
+            observer.next(this.tercos);
+        })
     }
 }

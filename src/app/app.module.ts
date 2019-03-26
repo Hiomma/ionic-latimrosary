@@ -17,18 +17,25 @@ import { MisteriosService } from 'src/services/misterios/misterios.service';
 import { NavService } from 'src/services/nav/nav.service'
 import { Media } from '@ionic-native/media/ngx';
 import { ComponentsModule } from './components/components.module';
+import { StorageService } from 'src/services/storage/storage.service';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
-    declarations: [AppComponent ],
+    declarations: [AppComponent],
     imports: [BrowserModule,
         AngularFireModule.initializeApp(environment.firebase),
         AngularFirestoreModule,
         ComponentsModule,
         IonicModule.forRoot(),
+        IonicStorageModule.forRoot({
+            name: '_lcm',
+            driverOrder: ['websql', 'indexeddb', 'sqlite']
+        }),
         AppRoutingModule],
     providers: [
         StatusBar,
         SplashScreen,
+        StorageService,
         OracoesService,
         TercosService,
         MisteriosService,
