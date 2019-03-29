@@ -9,6 +9,7 @@ const routes: Routes = [
     { path: 'ver-oracao', loadChildren: './oracao/ver-oracao/ver-oracao.module#VerOracaoPageModule' },
     { path: '', loadChildren: './tab/tab.module#TabPageModule' },
   { path: 'ver-terco', loadChildren: './terco/ver-terco/ver-terco.module#VerTercoPageModule' },
+  { path: 'credito', loadChildren: './credito/credito.module#CreditoPageModule' },
 ];
 
 @NgModule({

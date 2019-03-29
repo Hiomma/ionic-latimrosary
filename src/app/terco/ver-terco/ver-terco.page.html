@@ -52,8 +52,8 @@
 <ion-footer>
     <div *ngIf="audio">
         <ion-item style="--background: var(--background-escuro);">
-            <ion-icon class="iconePlayer" slot="start" name="play" *ngIf="!play" (click)="ativarPlay()"></ion-icon>
-            <ion-icon class="iconePlayer" slot="start" name="pause" *ngIf="play" (click)="ativarPlay()"></ion-icon>
+            <ion-icon class="iconePlayer" slot="start" name="play" *ngIf="!play" (click)="ativarPlay(true)"></ion-icon>
+            <ion-icon class="iconePlayer" slot="start" name="pause" *ngIf="play" (click)="ativarPlay(true)"></ion-icon>
             <ion-range min="0" [max]="duracao" (ngModelChange)="avancarMusica()" [(ngModel)]="tempoMusica"
                 class="rangePlayer"></ion-range>
         </ion-item>
