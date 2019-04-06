@@ -15,7 +15,7 @@ export class VerOracaoPage implements OnInit {
     oracao: any;
     reproduzir: boolean = false;
     traducao: boolean = false;
-    audio: boolean = false;
+    audio: boolean = true;
     play: boolean = false;
 
     duracao: number;

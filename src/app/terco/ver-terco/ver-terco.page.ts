@@ -36,8 +36,8 @@ export class VerTercoPage implements OnInit, OnDestroy {
     tercoFinalizado: boolean = false;
 
     traducao: boolean = false;
-    reproduzir: boolean = false;
-    audio: boolean = false;
+    reproduzir: boolean = true;
+    audio: boolean = true;
 
     play: boolean = false;
     duracao: number;
@@ -172,6 +172,9 @@ export class VerTercoPage implements OnInit, OnDestroy {
     }
 
     ativarPlay(playHtml?) {
+        clearInterval(this.interval);
+        clearInterval(this.musicaInterval);
+
         this.tempoMusica = 0;
         this.duracao = -1;
         this.musica.play();
