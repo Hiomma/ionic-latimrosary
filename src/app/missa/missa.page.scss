@@ -1,0 +1,41 @@
+.contentTerco{
+    --background: var(--background-escuro);
+}
+
+.imagem{
+    height: 80px;
+    margin-top: 10px;
+}
+
+.pTitulo{
+    color: #fff;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.divTerco{
+    position: relative;
+    border: 1px solid var(--borda-escura);
+    border-radius: 10px;
+    height: 150px;
+    text-align: center;
+    background: var(--background-claro);
+}
+
+.pNome{
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+}
+
+.pDescricao{
+    color: #fff;
+    font-weight: 100;
+    font-size: 12px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}

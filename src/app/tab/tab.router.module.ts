@@ -26,6 +26,15 @@ const routes: Routes = [
                 ]
             },
             {
+                path: 'missa',
+                children: [
+                    {
+                        path: '',
+                        loadChildren: '../missa/missa.module#MissaPageModule'
+                    }
+                ]
+            },
+            {
                 path: '',
                 redirectTo: '/tab/terco',
                 pathMatch: 'full'

@@ -10,6 +10,7 @@ const routes: Routes = [
     { path: '', loadChildren: './tab/tab.module#TabPageModule' },
   { path: 'ver-terco', loadChildren: './terco/ver-terco/ver-terco.module#VerTercoPageModule' },
   { path: 'credito', loadChildren: './credito/credito.module#CreditoPageModule' },
+  { path: 'missa', loadChildren: './missa/missa.module#MissaPageModule' },
 ];
 
 @NgModule({
