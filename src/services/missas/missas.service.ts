@@ -176,7 +176,103 @@ export class MissasService {
                     },
                     {
                         id: 15,
-                        titulo: "Nanc Igitur"
+                        titulo: "Hanc Ígitur",
+                        conteudo: '<p style="color: #FF6961">O Sacerdote extende as mãos sobre a hóstia e o cálice, para revordar, segundo um rito da antigua Lei, que Nossso Senhor Jesus Cristo, Vítima inocente, ' +
+                            'carregou o peso dos nossos pecados. (O acólito toca a compainha)</p></br>' +
+                            '<p>Hanc ígitur oblatiónem servitútis nostrae, sed et cunc tae famíliae tuae, quaésumus, Dómine, ut placátus accípias: diésque nostros in tua pace dispónas, atque ab aetérna damnatióne nos éripi, et in ' +
+                            'electórum tuórum iúbeas grege numerári.</p></br>' +
+                            '<p>Per Christum Dóminum nostrum. Amen.</p>' +
+                            '<p>Quam oblatitónem tu, Deus, in ómnibus, quaésumus, benedictam †, adscríptam †, ratam †, rationábilem, acceptabilémque fácere dignéris (sígnat sémel super hóstiam) ut nobis † Corpus et Sanguis † ' +
+                            'fiat dilectíssimi Filii tui Dómini nostri Iesu Christi. </p>'
+                    },
+                    {
+                        id: 16,
+                        titulo: "Consagração",
+                        conteudo: '<p>Qui pridie quam paterétur accépit panem in sanctas ac venerábiles manus suas et elevátis óculis in coélum, ad te Deum Patrem sunum omnipoténtem, tibi grátias ágens, benedíxit fregit, ' +
+                            'deditque discípulis suis, dicens: </p>' +
+                            '<p>Accípite, et manducáte ex hoc ómnes: </p></br>' +
+                            '<p style="font-weigth: bold">HOC EST ENIM CORPUS MEUM</p></br>' +
+                            '<p>Símili modo póstquam cenátum est accípiens et hunc praeclárum cálicem in sanctas ac venerábiles manus suas: ittemt, tibi grátias ágens benedíxit †, dedítque discípulis suis, ' +
+                            'dicens: Accípite et bibíte ex eo ómnes: </p></br>' +
+                            '<p style="font-weigth: bold">HIC EST ENIM CALIX SÁNGUINIS MEI, NOVI ET AETÉRNI TESTAMÉNTI: MYSTÉRIUM FÍDEI: QUI PRO VOBIS ET PRO MULTIS EFFUNDÉTUR IN REMISSIÓNEM PECCATÓRUM</p></br>' +
+                            '<p>Haec quotiescúmque fecértis,  in mei mem´riam faciétis.</p>' +
+                            '<p>Unde et mémores, Dómine, nos servi tui, sed et plebs tua sancta, eiúsdem Christi Fílii tui, Dómini nostri, tam beátae passiónis, nec non et ab ínferis ressurectiónis, ' +
+                            'sed et in coélos gloriósae ascensiónis: offérimus praeclárae maiestáti tuae, de tuis donis, ac datis hóstiam † puram, hóstiam † sanctam, hóstiam † immaculátam, et cálicem † salútis perpétuae.</p>' +
+                            '<p>Supra quae propítio ac seréno vultu respírece dignéris: et accépta habére, sícuti accépta habére dignátus es múnera púeri tuti iusti Abel, et sacrificium Patriárchae nostri Abrahae: ' +
+                            'sanctum sacrifícium, immaculátam hóstiam.</p>' +
+                            '<p>Súpplices te rogámus, omnípotens Deus, iube hæc perférri per manus sancti Angeli tui in sublíme altáre tuum, in conspéctu divínæ maiestátis tuæ: ut quoquot ex hac altáris participatióne' +
+                            'sacrosánctum Fílii tui † Corpus, et † Sanguinem sumpsérimus, ómni benedictióne cælesti et grátia repleámur. Per eúmdem Christum Dóminum nostrum. Amen.</p>' +
+                            '<p>Meménto étiam, Dómine, famulórum famularúmque tuárum N. et N. qui nos præcessérunt cum signo fídei, et dórmiunt in somno pacis. ' +
+                            'Ipsis, Dómine, et ómnibus in Christo quiescéntibus, locum refrigérii, lucis et pacis, ut indúlgeas, deprecámur. Per eúmdem Christum Dóminum nostrum. Amen.</p>' +
+                            '<p>Nobis quoque peccatóribus fámulis tuis, de multitúdine miseratiónum tuárum sperántibus, partem áliquam, et societátem donáre dignéris, cum tuis sanctis Apóstolis et ' +
+                            'Martyribus: cum Ioánne, Stéphano, Matthía, Barnaba, Ignátio, Alexándro, Marcellíno, Petro, Felicitáte, Perpétua, Agatha, Lúcia, Agnéte, Cæcília, Anastásia, et ómnibus Sanctis ' +
+                            'tuis: intra quorum nos consórtium non æstimátor mériti, sed véniæ, quæsumus, largítor admítte. Per Christum Dóminum nostrum. Amem.</p>' +
+                            '<p>Per quem hæc ómnia Dómine, semper bona creas, † sanctíficas, † vivificas, † benedícis, et præstas nobis. </p>'
+                    },
+                    {
+                        id: 17,
+                        titulo: "Doxologia Final",
+                        conteudo: '<p>S/. PER † IPSUM, ET CUM † IPSO, ET IN † IPSO, EST TIBI DEO PATRI † OMNIPOTÉNTI, IN UNITÁTE SPÍRITUS † SANCTI, OMNIS HONOR ET GLÓRIA. PER ÓMNIA SÆCULA SÆCULÓRUM.</p>' +
+                            '<p style="font-weight: bold">T/. Amen</p>'
+                    },
+                    {
+                        id: 18,
+                        titulo: "Pater Noster",
+                        conteudo: '<p>S/. Orémus.Præceptis salutáribus móniti, et divína institutióne formáti, audemus dícere:</p>' +
+                            '<p>Pater noster, qui es in cælis: / Sanctificétur nomen tuum: / Advéniat regnum tuum: / Fiat volúntas tua, sicut in cælo, et in terra. / Panem nostrum quotidiánum da nobis hódie: / Et dimítte ' +
+                            'nobis débita nostra, / sicut et nos dimíttimus tem debitóribus nostris. / Et ne nos inducas in tentatiónem, </p>' +
+                            '<p style="font-weight: bold">T/. Sed líbera nos a malo.</p>' +
+                            '<p>S./ Líbera nos, quæsumus, Dómine, ab ómnibus malis, prætéritis, præséntibus, et futúris: et intercedénte beáta et gloriósa semper Vírgine Dei Genitríce María, cum beátis Apóstolis ' +
+                            'tuis Petro et Paulo, atque Andréa, et ómnibus Sanctis, da propítius pacem in diébus nostris: ut ope misericórdiæ tuæ adiutí, et a peccáto simus semper líberi, et ab omni ' +
+                            'perturbatióne secúri. Per eúmdem Dóminum nostrum Jesum Christum, Fílium tuum. Qui tecum vivit et regnat in unitáte Spíritus Sanctis Deus, Per ómnia sǽcula sæculórum.</p>' +
+                            '<p style="font-weight: bold">T/.  Amen.</p>'
+                    },
+                    {
+                        id: 19,
+                        titulo: "Agnus Dei",
+                        conteudo: '<p>S./ Pax † Dómini † sit simper † vobiscum.</p>' +
+                            '<p style="font-weight: bold">T/. Et cum spíritu tuo.</p>' +
+                            '<p style="font-weight: bold">T/. Agnus Dei, qui tollis peccata mundi: Miserére nobis.</p>' +
+                            '<p style="font-weight: bold">T/. Agnus Dei, qui tollis peccata mundi: Miserére nobis.</p>' +
+                            '<p style="font-weight: bold">T/. Agnus Dei, qui tollis peccata mundi: Dona nobis pacem.</p>'
+                    },
+                    {
+                        id: 20,
+                        titulo: "Comunhão do Sacerdote",
+                        conteudo: '<p style="color: #FF6961">O Sacerdote bate no peito três vezes e, aplicando à sua alma as palavras do centurião do Evangelho, diz:</p></br>' +
+                            '<p>S/.Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur anima mea. <strong>3 vezes</strong></p></br>' +
+                            '<p style="color: #FF6961">Depois o Sacerdote comunga, tomando a Sagrada Hóstia e o Preciosíssimo Sangue.</p></br>'
+                    },
+                    {
+                        id: 21,
+                        titulo: "Comunhão dos fiéis",
+                        conteudo: '<p style="color: #FF6961">De joelhos. Antes de comungarem, os fiéis rezam o Confiteor. O Sacerdote toma a sagrada hóstia e presenta-a aos fiéis dizendo: </p></br>' +
+                            '<p>S/. Ecce Agnus Dei, ecce qui tollit peccata mundi.</p>' +
+                            '<p style="font-weight: bold">T/. Dómine, non sum dignus, ut intres sub tectum meum: sed tantum dic verbo, et sanábitur anima mea.</p>' +
+                            '<p style="color: #FF6961">O Sacerdote dá a Comunhão a cada fiel, dizendo: </p></br>' +
+                            '<p>S/. Corpus Dómini nostri Iesu Christi † custódiat ánimam tuam in vitam ætérnam. Amen. </p>'
+                    },
+                    {
+                        id: 22,
+                        titulo: "Pós Comunhão",
+                        conteudo: '<p style="color: #FF6961">De pé.</p></br>' +
+                            '<p>S/. Dóminus vobíscum.</p>' +
+                            '<p style="font-weight: bold">T/. Et cum spíritu tuo.</p>' +
+                            '<p>S/. Orémus.</p></br>' +
+                            '<p style="color: #FF6961">O Sacerdotet passa ao centro, beija o altara e, voltando ao povo, diz:</p></br>' +
+                            '<p>S/. Dóminus vobíscum.</p>' +
+                            '<p style="font-weight: bold">T/. Et cum spíritu tuo.</p>' +
+                            '<p>S/. Ite, Missa est.</p>' +
+                            '<p style="font-weight: bold">T/. Deo grátias.</p></br>' +
+                            '<p style="color: #FF6961">O Sacerdote beija o altar e voltando-se ao povo, abençoa-o:</p>' +
+                            '<p style="color: #FF6961">De Joelhos</p></br>' +
+                            '<p>S/. Benedicat vos omnípotens Deus: Pater, et Filius, † et Spíritus Sanctus.</p>' +
+                            '<p style="font-weight: bold">T/. Amen.</p>'
+                    },
+                    {
+                        id: 23,
+                        titulo: "Último Evangelho",
+                        conteudo: ''
                     }
                 ]
             },
