@@ -18,7 +18,7 @@ export class MissasService {
                     {
                         id: 1,
                         titulo: "Rito de Entrada",
-                        conteudo: '<p>S/. In nómine Patris † et Filii et Spíritus Sancti. Amen. </p> <p>S/. Introíbo ad altáre Dei.<p style="font-weight: bold">T/. Ad Deum qui laetifícat iuventútem meam.<p></p>'
+                        conteudo: '<p>S/. In nómine Patris † et Filii et Spíritus Sancti. Amen. </p> <p>S/. Introíbo ad altáre Dei.<p style="font-weight: bold">T/. Ad Deum qui lætifícat iuventútem meam.<p></p>'
                     },
                     {
                         id: 2,
@@ -26,38 +26,38 @@ export class MissasService {
                         conteudo: '<p>S/. Iúdica me, Deusu, et discérne causam meam de gente non sancta: ab hómine iniquo, et dolósso érue me.</p>' +
                             '<p style="font-weight: bold">T/. Quia tu es, Deus, fortitúdo mea: quare me repulísti, et quare tristis incédo, dum afflígitt me inimícus?</p>' +
                             '<p>S/. Emíttet lucem tuam et veritátem tuam: ipsa me deduxérunt, et adduxérunt in montem sanctum tuum, et in tabernácula tua.</p>' +
-                            '<p style="font-weight: bold">T/. Et introíbo ad altáre Dei: ad Deum qui laetificat iu ventútem meam.</p>' +
+                            '<p style="font-weight: bold">T/. Et introíbo ad altáre Dei: ad Deum qui lætificat iu ventútem meam.</p>' +
                             '<p>S/. Confitébor tibi in cíthara, Deus, Deus meus; quare tristis es, ánima mea, ett quare contúrbas me?</p>' +
                             '<p style="font-weight: bold">T/. Spera in Deo, quóniam adhuc confitébor illi: salutáre vultus mei, et Deus meus.</p>' +
                             '<p>S/. Glória Patri et Filio et Spiritui Sancto</p>' +
-                            '<p style="font-weight: bold">T/. Sicut erat in princípio et nunc et semper, et in saécula saeculórum. Amen.</p>' +
+                            '<p style="font-weight: bold">T/. Sicut erat in princípio et nunc et semper, et in saécula sæculórum. Amen.</p>' +
                             '<p>S/. Introíbo ad altáre Dei.</p>' +
-                            '<p style="font-weight: bold">T/. Ad Deum qui laetificat iuventútem meam.</p>' +
+                            '<p style="font-weight: bold">T/. Ad Deum qui lætificat iuventútem meam.</p>' +
                             '<p>S/. Adiutórium nostrum † in nómine Dómini</p>' +
-                            '<p style="font-weight: bold">T/. Qui fecit caelum et terram.</p>'
+                            '<p style="font-weight: bold">T/. Qui fecit cælum et terram.</p>'
                     },
                     {
                         id: 3,
                         titulo: "Confiteor do Celebrante",
-                        conteudo: '<p>S/. Confíteor Deo Omnipoténti,/ Beáte Mariae semper Virgini,/ Beato Michaéli Archángelo,/ Beáto Ioánni Baptistae,/ Sanctis Apostólis Petro et Paulo,/ ómnibus Sanctis et vobis frates,/ ' +
+                        conteudo: '<p>S/. Confíteor Deo Omnipoténti,/ Beáte Mariæ semper Virgini,/ Beato Michaéli Archángelo,/ Beáto Ioánni Baptistæ,/ Sanctis Apostólis Petro et Paulo,/ ómnibus Sanctis et vobis frates,/ ' +
                             'quia peccávi nimis cogitatióne, verbo et ópere:/ <span style="color: #FF6961">(batendo três vezes no peito)</span> mea culpa, mea culpa, mea máxima culpa;/ ideo precor beátatm Maríam ' +
                             'semper Vírginem,/ Beátum Michaélem Archángelum,/ Beátum Ioánnem Baptístam,/ Sanctos Apóstotlos Petrum et Paulum,/ omnes Sanctos, et vos fratres,/ oráre pro me ad Dóminum Deum nostrum. ' +
-                            '<p style="font-weight: bold">T/. Misereátur tui Omnípotens Deus, et, dimíssis, peccátis tuis, perdúcat te ad vitam aetérnam.</p>' +
+                            '<p style="font-weight: bold">T/. Misereátur tui Omnípotens Deus, et, dimíssis, peccátis tuis, perdúcat te ad vitam ætérnam.</p>' +
                             '<p>S/. Amen.</p>'
                     },
                     {
                         id: 4,
                         titulo: "Confiteor dos fiéis",
-                        conteudo: '<p style="font-weight: bold">T/. Confíteor Deo Omnipoténti,/ Beáte Mariae semper Virgini,/ Beato Michaéli Archángelo,/ Beáto Ioánni Baptistae,/ Sanctis Apostólis Petro et Paulo,/ ómnibus Sanctis et tibi, pater,/ ' +
+                        conteudo: '<p style="font-weight: bold">T/. Confíteor Deo Omnipoténti,/ Beáte Mariæ semper Virgini,/ Beato Michaéli Archángelo,/ Beáto Ioánni Baptistæ,/ Sanctis Apostólis Petro et Paulo,/ ómnibus Sanctis et tibi, pater,/ ' +
                             'quia peccávi nimis cogitatióne, verbo et ópere:/ <span style="color: #FF6961">(batendo três vezes no peito)</span> mea culpa, mea culpa, mea máxima culpa;/ ideo precor beátatm Maríam ' +
                             'semper Vírginem,/ Beátum Michaélem Archángelum,/ Beátum Ioánnem Baptístam,/ Sanctos Apóstotlos Petrum et Paulum,/ omnes Sanctos, et te, pater,/ oráre pro me ad Dóminum Deum nostrum. ' +
-                            '<p>S/. Misereátur vestri Omnípotens Deus, et, dimíssis, peccátis vestris, perdúcat vos ad vitam aetérnam.</p>' +
+                            '<p>S/. Misereátur vestri Omnípotens Deus, et, dimíssis, peccátis vestris, perdúcat vos ad vitam ætérnam.</p>' +
                             '<p style="font-weight: bold">T/. Amen.</p>' +
                             '<p>S/. Indulgéntiam, absolutiónem et remissiónem peccatórum nostrorum tribuat nobis Omnípotens et Miséricors Dóminus.</p>' +
                             '<p style="font-weight: bold">T/. Amen.</p>' +
                             '<p style="color: #FF6961">(O celebrante, inclinado-se, diz:)</p></br></br>' +
                             '<p>S/. Deus, tu convérsus vivificábis nos.</p>' +
-                            '<p style="font-weight: bold">T/. Et plebs tua laetábitur in te.</p>' +
+                            '<p style="font-weight: bold">T/. Et plebs tua lætábitur in te.</p>' +
                             '<p>S/. Osténde nobis, Dómine, misericórdiam tuam.</p>' +
                             '<p style="font-weight: bold">T/. Et salutáre tuum da nobis.</p>' +
                             '<p>S/. Dómine, exáudi oratiónem meam.</p>' +
@@ -84,8 +84,8 @@ export class MissasService {
                     {
                         id: 6,
                         titulo: "Glória",
-                        conteudo: '<p>Glória in excélsis Deo.</p><span style="font- weight: bold">Et in terra pax hominibus bonae voluntátis. Laudámus te. Benedícimus te. Adorámus te. Glorificámus te. </span>' +
-                            'Grátias ágimus tibi propter magnam glóriam tuam. Dómine Deus, Rex caeléstis, Deus Pater Omnípotens. Dómine Fili Unigénite, Iesu Christe. Domine Deus, Agnus Dei, Filius Patris. Qui tollis ' +
+                        conteudo: '<p>Glória in excélsis Deo.</p><span style="font- weight: bold">Et in terra pax hominibus bonæ voluntátis. Laudámus te. Benedícimus te. Adorámus te. Glorificámus te. </span>' +
+                            'Grátias ágimus tibi propter magnam glóriam tuam. Dómine Deus, Rex cæléstis, Deus Pater Omnípotens. Dómine Fili Unigénite, Iesu Christe. Domine Deus, Agnus Dei, Filius Patris. Qui tollis ' +
                             'peccátat mundi, miserére nobis. Qui tollis peccáta mundi, súscipe deprecatiónem nostram. Qui sedes ad déxteram Patris, miserére nobis. Quóniam Te solus Sanctus. Tu solus Dóminus. Tu solus Altíssimus, ' +
                             'Iesu Christe, cum Sancto Spiritu † in glória Dei Patris. Amen.</span>' +
                             '<p>S/. Dóminus vobíscum.</p>' +
@@ -96,7 +96,7 @@ export class MissasService {
                         id: 7,
                         titulo: "Epístola",
                         conteudo: '<p style="color: #FF6961">O texto da Epístola é próprio de cada Santa Missa.</p>' +
-                            '<p>S/. Léctio Espístolae</p></br></br>' +
+                            '<p>S/. Léctio Espístolæ</p></br></br>' +
                             '<p style="color: #FF6961">Ao terminar a Epístola, responde-se:</p>' +
                             '<p style="font-weight: bold">T/. Deo grátias.</p>'
                     },
@@ -130,13 +130,13 @@ export class MissasService {
                         conteudo: '<p style="color: #FF6961">Antes de iniciar a celebração do mistério com o ofericmento do Pão e do Vinho, que vão ser transformados no Corpo e no Sangue de Jesus Cristo.</p></br>' +
                             '<p style="color: #FF6961">O Sacerdote beija o altar, volta-se para os fiéis e os convida a unirem-se a ele, em oração fervorosa.</p></br>' +
                             '<p>S/. Orate frates, ut meum ac vestrum sacrificium acceptabile fiat apud Deum Patrem omnipotentem.</p>' +
-                            '<p style="font-weight: bold">T/. Suscipiat Dominus sacrifium de manibus tuis, ad laudem et gloriam nominis sui, ad utilitatem quoque nostram totiusque Ecclesiae suae sanctae.</p>' +
+                            '<p style="font-weight: bold">T/. Suscipiat Dominus sacrifium de manibus tuis, ad laudem et gloriam nominis sui, ad utilitatem quoque nostram totiusque Ecclesiæ suæ sanctæ.</p>' +
                             '<p>S/. Amen.</p>'
                     },
                     {
                         id: 11,
                         titulo: "Secreta",
-                        conteudo: '<p>S/. Per ómnia saecula saeculórum.</p>' +
+                        conteudo: '<p>S/. Per ómnia sæcula sæculórum.</p>' +
                             '<p style="font-weight: bold">T/. Amem</p>'
                     },
                     {
@@ -149,29 +149,29 @@ export class MissasService {
                             '<p style="font-weight: bold">T/. Habémus ad Dóminum</p>' +
                             '<p>S/. Grátias agámus Dómino Deo nostro.</p>' +
                             '<p style="font-weight: bold">T/. Dignum et iustum est.</p>' +
-                            '<p>S/. Vere dignum et justum est, aequum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine sancte, Pater omnípotens, aetérne Deus: Qui cum Unigénito Fílio tuo et Spíritu Sancto, ' +
-                            'unus es Deus, unus es Dóminus, non in uníus singularitáte persónae, sed in uníus Trinitáte substántiae. Quod enim de tua glória, revelánte te, crédimus, hoc de Fílio tuo, hoc de Spíritu Sancto, ' +
-                            'sine differéntia discretiónis sentímus; ut in confessióne verae sempiternaéque Deitátis, et  in persónis propríetas et in esséntia únitats et in maiestáte adorétur aequálitas. Quam laudant Angeli ' +
+                            '<p>S/. Vere dignum et justum est, æquum et salutáre, nos tibi semper et ubíque grátias ágere: Dómine sancte, Pater omnípotens, ætérne Deus: Qui cum Unigénito Fílio tuo et Spíritu Sancto, ' +
+                            'unus es Deus, unus es Dóminus, non in uníus singularitáte persónæ, sed in uníus Trinitáte substántiæ. Quod enim de tua glória, revelánte te, crédimus, hoc de Fílio tuo, hoc de Spíritu Sancto, ' +
+                            'sine differéntia discretiónis sentímus; ut in confessióne veræ sempiternaéque Deitátis, et  in persónis propríetas et in esséntia únitats et in maiestáte adorétur æquálitas. Quam laudant Angeli ' +
                             'atque Archangeli, Chérubim quoque ac Séraphim, qui non ces sant clamare cotídie, una voce dicéntes:</p>'
                     },
                     {
                         id: 13,
                         titulo: "Sanctus",
                         conteudo: '<p style="color: #FF6961">Em pé.</p></br>' +
-                            '<p style="font-weight: bold">Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth. Pleni sunt caeli et terra glória tua. Hosánna in excélsis. Benedictus qui venit † in nómine Dómini. Hosánna in excélsis.</p></br>' +
+                            '<p style="font-weight: bold">Sanctus, Sanctus, Sanctus, Dóminus Deus Sábaoth. Pleni sunt cæli et terra glória tua. Hosánna in excélsis. Benedictus qui venit † in nómine Dómini. Hosánna in excélsis.</p></br>' +
                             '<p style="color: #FF6961">De joelhos.</p></br>'
                     },
                     {
                         id: 14,
                         titulo: "Cânon Romano",
-                        conteudo: '<p>Te ígnitur, clementíssime Pater, per Iesum Christum Filium tuum Dóminum nostrum, súpplices rogámus, ac pétimus uti accépta hábeas, et benedícas haec dona, haec múnera, haec sancta sacrifícia ' +
-                            'illibáta in primis, quae tibi offérimus pro Ecclésia tua sancta cathólica: quam pacificáre, custodíre, adunáre et régere dignéris toto orbe terrárum: una cum fámulo tuo Papa nostro N., et ' +
-                            'Antístite nostro N., et ómnibus orthodóxis, atque cathólicae, et apostólicae fidei cultóribus. </p></br>' +
+                        conteudo: '<p>Te ígnitur, clementíssime Pater, per Iesum Christum Filium tuum Dóminum nostrum, súpplices rogámus, ac pétimus uti accépta hábeas, et benedícas hæc dona, hæc múnera, hæc sancta sacrifícia ' +
+                            'illibáta in primis, quæ tibi offérimus pro Ecclésia tua sancta cathólica: quam pacificáre, custodíre, adunáre et régere dignéris toto orbe terrárum: una cum fámulo tuo Papa nostro N., et ' +
+                            'Antístite nostro N., et ómnibus orthodóxis, atque cathólicæ, et apostólicæ fidei cultóribus. </p></br>' +
                             '<p>Meménto, Dómine, famulórum, famularúmque tuáram .et . et ómnium circumstántium, quórum tibi fides cógnita est, et nota devótio, pro quibus tibi offérimus: hoc sacrifícium ' +
-                            'láudis, pro se, suísque ómnibus: pro redemptióne animárum suárum, pro spe salútis, et incolumitátis suae: tibíque reddunt vota sua aetérno Deo, vivo et vero.</p></br>' +
-                            '<p>Communicántes, et memóriam venerántes, in primís gloriósae semper Virginis Mariae, Genetrícis Dei et Dómini nostri Iesu Christi: sed et beáti Ióseph, eiúsdem Virginis Sponsi, et beatórum ' +
-                            'Apostolórum ac Mártyrum tuórum Petri et Pauli, Andréae, Iacóbi, Ioánnis, Thomae, Iacóbi, Philippi, Bartholomaéi, Matthaéi, Simónis et Thaddaéi: Lini, Cleti, Cleméntis, Xysti, Cornélii, Cypriány, ' +
-                            'Lauréntii, Chrysógoni, Iioánnis et Pauli, Cosmae et Damiáni: et ómnium Sanctórum tuórum, quórum méritis, precibúsque concédas, ut in ómnibus protectiónis tuae muniámur auxílio. ' +
+                            'láudis, pro se, suísque ómnibus: pro redemptióne animárum suárum, pro spe salútis, et incolumitátis suæ: tibíque reddunt vota sua ætérno Deo, vivo et vero.</p></br>' +
+                            '<p>Communicántes, et memóriam venerántes, in primís gloriósæ semper Virginis Mariæ, Genetrícis Dei et Dómini nostri Iesu Christi: sed et beáti Ióseph, eiúsdem Virginis Sponsi, et beatórum ' +
+                            'Apostolórum ac Mártyrum tuórum Petri et Pauli, Andréæ, Iacóbi, Ioánnis, Thomæ, Iacóbi, Philippi, Bartholomaéi, Matthaéi, Simónis et Thaddaéi: Lini, Cleti, Cleméntis, Xysti, Cornélii, Cypriány, ' +
+                            'Lauréntii, Chrysógoni, Iioánnis et Pauli, Cosmæ et Damiáni: et ómnium Sanctórum tuórum, quórum méritis, precibúsque concédas, ut in ómnibus protectiónis tuæ muniámur auxílio. ' +
                             'Per eúmdem Chritum Dóminum nostrum. Amen</p></br>'
                     },
                     {
@@ -179,7 +179,7 @@ export class MissasService {
                         titulo: "Hanc Ígitur",
                         conteudo: '<p style="color: #FF6961">O Sacerdote extende as mãos sobre a hóstia e o cálice, para revordar, segundo um rito da antigua Lei, que Nossso Senhor Jesus Cristo, Vítima inocente, ' +
                             'carregou o peso dos nossos pecados. (O acólito toca a compainha)</p></br>' +
-                            '<p>Hanc ígitur oblatiónem servitútis nostrae, sed et cunc tae famíliae tuae, quaésumus, Dómine, ut placátus accípias: diésque nostros in tua pace dispónas, atque ab aetérna damnatióne nos éripi, et in ' +
+                            '<p>Hanc ígitur oblatiónem servitútis nostræ, sed et cunc tæ famíliæ tuæ, quaésumus, Dómine, ut placátus accípias: diésque nostros in tua pace dispónas, atque ab ætérna damnatióne nos éripi, et in ' +
                             'electórum tuórum iúbeas grege numerári.</p></br>' +
                             '<p>Per Christum Dóminum nostrum. Amen.</p>' +
                             '<p>Quam oblatitónem tu, Deus, in ómnibus, quaésumus, benedictam †, adscríptam †, ratam †, rationábilem, acceptabilémque fácere dignéris (sígnat sémel super hóstiam) ut nobis † Corpus et Sanguis † ' +
@@ -192,13 +192,13 @@ export class MissasService {
                             'deditque discípulis suis, dicens: </p>' +
                             '<p>Accípite, et manducáte ex hoc ómnes: </p></br>' +
                             '<p style="font-weigth: bold">HOC EST ENIM CORPUS MEUM</p></br>' +
-                            '<p>Símili modo póstquam cenátum est accípiens et hunc praeclárum cálicem in sanctas ac venerábiles manus suas: ittemt, tibi grátias ágens benedíxit †, dedítque discípulis suis, ' +
+                            '<p>Símili modo póstquam cenátum est accípiens et hunc præclárum cálicem in sanctas ac venerábiles manus suas: ittemt, tibi grátias ágens benedíxit †, dedítque discípulis suis, ' +
                             'dicens: Accípite et bibíte ex eo ómnes: </p></br>' +
                             '<p style="font-weigth: bold">HIC EST ENIM CALIX SÁNGUINIS MEI, NOVI ET AETÉRNI TESTAMÉNTI: MYSTÉRIUM FÍDEI: QUI PRO VOBIS ET PRO MULTIS EFFUNDÉTUR IN REMISSIÓNEM PECCATÓRUM</p></br>' +
-                            '<p>Haec quotiescúmque fecértis,  in mei mem´riam faciétis.</p>' +
-                            '<p>Unde et mémores, Dómine, nos servi tui, sed et plebs tua sancta, eiúsdem Christi Fílii tui, Dómini nostri, tam beátae passiónis, nec non et ab ínferis ressurectiónis, ' +
-                            'sed et in coélos gloriósae ascensiónis: offérimus praeclárae maiestáti tuae, de tuis donis, ac datis hóstiam † puram, hóstiam † sanctam, hóstiam † immaculátam, et cálicem † salútis perpétuae.</p>' +
-                            '<p>Supra quae propítio ac seréno vultu respírece dignéris: et accépta habére, sícuti accépta habére dignátus es múnera púeri tuti iusti Abel, et sacrificium Patriárchae nostri Abrahae: ' +
+                            '<p>Hæc quotiescúmque fecértis,  in mei mem´riam faciétis.</p>' +
+                            '<p>Unde et mémores, Dómine, nos servi tui, sed et plebs tua sancta, eiúsdem Christi Fílii tui, Dómini nostri, tam beátæ passiónis, nec non et ab ínferis ressurectiónis, ' +
+                            'sed et in coélos gloriósæ ascensiónis: offérimus præcláræ maiestáti tuæ, de tuis donis, ac datis hóstiam † puram, hóstiam † sanctam, hóstiam † immaculátam, et cálicem † salútis perpétuæ.</p>' +
+                            '<p>Supra quæ propítio ac seréno vultu respírece dignéris: et accépta habére, sícuti accépta habére dignátus es múnera púeri tuti iusti Abel, et sacrificium Patriárchæ nostri Abrahæ: ' +
                             'sanctum sacrifícium, immaculátam hóstiam.</p>' +
                             '<p>Súpplices te rogámus, omnípotens Deus, iube hæc perférri per manus sancti Angeli tui in sublíme altáre tuum, in conspéctu divínæ maiestátis tuæ: ut quoquot ex hac altáris participatióne' +
                             'sacrosánctum Fílii tui † Corpus, et † Sanguinem sumpsérimus, ómni benedictióne cælesti et grátia repleámur. Per eúmdem Christum Dóminum nostrum. Amen.</p>' +
@@ -272,7 +272,17 @@ export class MissasService {
                     {
                         id: 23,
                         titulo: "Último Evangelho",
-                        conteudo: ''
+                        conteudo: '<p>S/. Dóminus vobíscum.</p>' +
+                            '<p style="font-weight: bold">T/. Et cum spíritu tuo.</p>' +
+                            '<p>S/. Initium † sancti Evangelii secundum Ioannem.</p>' +
+                            '<p style="font-weight: bold">T/. Gloria tibi, Domine.</p>' +
+                            '<p>In principio erat Verbum et Verbum erat apud Deum, et Deus erat Verbum. Hoc erat in principio apud Deum. Omnia per ipsum facta sunt, ' +
+                            'et sine ipso factum est nihil quod factum est; in ipso vita erat, et vita erat lux hominum; et lux in tenebris lucet, et tenebræ eam non comprehenderunt. ' +
+                            'Fuit homo missus a Deo cui nomen erat Joannes. Hic venit in testimonium, ut testimonium perhiberet de lumine, ut omnes crederent per illum. Non erat ille lux, ' +
+                            'sed ut testimonium perhiberet de lumine. Erat lux vera quæ illuminat omnem hominem venientem in hunc mundum. In mundo erat, et mundus per ipsum factus est et ' +
+                            'mundus eum non cognovit. In propria venit, et sui eum non receperunt. Quotquot autem receperunt eum, dedit eis potestatem filios Dei fieri; his qui credunt in ' +
+                            'nomine ejus, qui non ex sanguinibus, neque ex voluntate carnis, neque ex voluntate viri, sed ex Deo nati sunt. (ajoelha-se) Et Verbum caro factum est, et ' +
+                            'habitavit in nobis: et vidimus gloriam ejus, gloriam quasi Unigeniti a Patre, plenum gratiæ et veritatis.</p>'
                     }
                 ]
             },

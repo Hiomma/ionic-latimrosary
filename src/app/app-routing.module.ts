@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'ver-terco', loadChildren: './terco/ver-terco/ver-terco.module#VerTercoPageModule' },
   { path: 'credito', loadChildren: './credito/credito.module#CreditoPageModule' },
   { path: 'missa', loadChildren: './missa/missa.module#MissaPageModule' },
+  { path: 'ver-missa', loadChildren: './ver-missa/ver-missa.module#VerMissaPageModule' },
 ];
 
 @NgModule({

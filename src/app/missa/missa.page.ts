@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { MissasService } from 'src/services/missas/missas.service';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-missa',
-  templateUrl: './missa.page.html',
-  styleUrls: ['./missa.page.scss'],
+    selector: 'app-missa',
+    templateUrl: './missa.page.html',
+    styleUrls: ['./missa.page.scss'],
 })
 export class MissaPage implements OnInit {
+    listMissas: Array<any> = new Array();
 
-  constructor() { }
+    constructor(private missas: MissasService,
+        private router: Router) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.missas.getMissas().subscribe((res: any) => {
+            this.listMissas = res;
+        });
+    }
+
+    abrirMissa(aux) {
+        this.router.navigate(["ver-missa", aux.id])
+    }
 
 }

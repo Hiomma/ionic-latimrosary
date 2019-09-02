@@ -3,7 +3,7 @@
     <name>Terço em Latim</name>
     <description>Terço em Latim com Áudio!</description>
     <author email="gabrielf2@live.com" href="http://gabrielsereno.com.br/">Gabriel dos Santos Sereno</author>
-    <content original-src="index.html" src="http://192.168.25.132:8100" />
+    <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
