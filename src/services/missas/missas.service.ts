@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class MissasService {
-    private missas: any = new Array();
+    private missas: Array<any> = new Array();
 
 
     constructor() {
@@ -295,16 +295,6 @@ export class MissasService {
     }
 
     getMissas() {
-        return new Observable((observer) => {
-            observer.next(this.missas);
-        })
-    }
-
-    getMissasById(id) {
-        return new Observable((observer) => {
-            observer.next(this.missas.filter((element) => {
-                return element.idTerco == id;
-            }));
-        });
+        return this.missas;
     }
 }

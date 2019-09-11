@@ -15,7 +15,7 @@ export interface Misterio {
 })
 export class MisteriosService {
 
-    private misterios: any = new Array();
+    private misterios: Array<any> = new Array();
 
 
     constructor() {
@@ -165,16 +165,12 @@ export class MisteriosService {
     }
 
     getMisterios() {
-        return new Observable((observer) => {
-            observer.next(this.misterios);
-        })
+        return this.misterios;
     }
 
     getMisteriosById(id) {
-        return new Observable((observer) => {
-            observer.next(this.misterios.filter((element) => {
-                return element.idTerco == id;
-            }));
+        return this.misterios.filter((element) => {
+            return element.idTerco == id;
         });
     }
 }

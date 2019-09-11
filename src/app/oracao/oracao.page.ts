@@ -4,25 +4,23 @@ import { Router } from '@angular/router';
 import { NavService } from 'src/services/nav/nav.service';
 
 @Component({
-  selector: 'app-oracao',
-  templateUrl: './oracao.page.html',
-  styleUrls: ['./oracao.page.scss'],
+    selector: 'app-oracao',
+    templateUrl: './oracao.page.html',
+    styleUrls: ['./oracao.page.scss'],
 })
 export class OracaoPage implements OnInit {
 
-    listOracoes: any = new Array();
+    listOracoes: Array<any> = new Array();
 
     constructor(private oracoes: OracoesService,
         private nav: NavService,
         private router: Router) { }
 
     ngOnInit() {
-        this.oracoes.getOracoes().subscribe(res => {
-            this.listOracoes = res;
-        });
+        this.listOracoes = this.oracoes.getOracoes();
     }
 
-    abrirOracao(aux){
+    abrirOracao(aux) {
         this.nav.data = aux;
         this.router.navigateByUrl('/ver-oracao');
     }

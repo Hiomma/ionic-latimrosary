@@ -13,7 +13,7 @@ export interface Oracao {
 })
 export class OracoesService {
 
-    private oracoes: any = new Array();
+    private oracoes: Array<any> = new Array();
 
     constructor() {
 
@@ -87,8 +87,6 @@ export class OracoesService {
     }
 
     getOracoes() {
-        return new Observable((observer) => {
-            observer.next(this.oracoes);
-        })
+        return this.oracoes;
     }
 }

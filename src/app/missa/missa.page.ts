@@ -14,9 +14,7 @@ export class MissaPage implements OnInit {
         private router: Router) { }
 
     ngOnInit() {
-        this.missas.getMissas().subscribe((res: any) => {
-            this.listMissas = res;
-        });
+        this.listMissas = this.missas.getMissas()
     }
 
     abrirMissa(aux) {

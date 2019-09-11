@@ -57,8 +57,6 @@ export class TercosService {
     }
 
     getTercos() {
-        return new Observable((observer) => {
-            observer.next(this.tercos);
-        })
+        return this.tercos;
     }
 }

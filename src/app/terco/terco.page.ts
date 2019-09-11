@@ -10,19 +10,17 @@ import { NavService } from 'src/services/nav/nav.service';
 })
 export class TercoPage implements OnInit {
 
-    listTercos: any = new Array();
+    listTercos: Array<any> = new Array();
 
     constructor(private tercos: TercosService,
         private router: Router,
         private nav: NavService) { }
 
     ngOnInit() {
-        this.tercos.getTercos().subscribe(res => {
-            this.listTercos = res;
-        });
+        this.listTercos = this.tercos.getTercos();
     }
 
-    abrirTerco(aux){
+    abrirTerco(aux) {
         this.nav.data = aux;
         this.router.navigateByUrl("/ver-terco");
     }

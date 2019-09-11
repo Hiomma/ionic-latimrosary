@@ -6,6 +6,7 @@ import { MisteriosService } from 'src/services/misterios/misterios.service';
 import { PopoverController, Platform, AlertController } from '@ionic/angular';
 import { MediaObject, Media } from '@ionic-native/media/ngx';
 import { MenuTercoComponent } from 'src/app/components/menu-terco/menu-terco.component';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-ver-terco',
@@ -18,7 +19,7 @@ export class VerTercoPage implements OnInit, OnDestroy {
     oracao: any;
     misterioPt: string;
     listMisterios: any;
-    listOracao: any = new Array();
+    listOracao: Array<any> = new Array();
 
     sinalDaCruz: any;
     creio: any;
@@ -56,7 +57,13 @@ export class VerTercoPage implements OnInit, OnDestroy {
     musicaGloria: MediaObject;
     musicaSinalCruz: MediaObject;
 
-    musicaMisterio: any = new Array<MediaObject>();
+    musicaMisterio1: MediaObject;
+    musicaMisterio2: MediaObject;
+    musicaMisterio3: MediaObject;
+    musicaMisterio4: MediaObject;
+    musicaMisterio5: MediaObject;
+
+    private unSub1: Subscription;
 
     constructor(private nav: NavService,
         private router: Router,
@@ -70,93 +77,107 @@ export class VerTercoPage implements OnInit, OnDestroy {
     ngOnInit() {
         this.terco = this.nav.data;
 
-        this.misterios.getMisteriosById(this.terco.id).subscribe(data => {
-            this.listMisterios = data;
+        this.listMisterios = this.misterios.getMisteriosById(this.terco.id);
+        this.listOracao = this.oracoes.getOracoes();
 
-            this.oracoes.getOracoes().subscribe(data => {
-                this.listOracao = data;
+        this.listMisterios = this.listMisterios.sort((a, b) => { return a.id < b.id ? -1 : a.id > b.id ? 1 : 0; });
 
-                this.listMisterios.forEach((element: any) => {
-                    this.musicaMisterio.push(this.media.create("/android_asset/www/music/" + element.audio));
-                })
+        this.musicaMisterio1 = this.media.create("/android_asset/www/music/" + this.listMisterios[0].audio);
+        this.musicaMisterio2 = this.media.create("/android_asset/www/music/" + this.listMisterios[1].audio);
+        this.musicaMisterio3 = this.media.create("/android_asset/www/music/" + this.listMisterios[2].audio);
+        this.musicaMisterio4 = this.media.create("/android_asset/www/music/" + this.listMisterios[3].audio);
+        this.musicaMisterio5 = this.media.create("/android_asset/www/music/" + this.listMisterios[4].audio);
 
-                this.listOracao.forEach(element => {
-                    switch (element.id) {
-                        case 1:
-                            this.creio = element;
+        this.listOracao.forEach(element => {
+            switch (element.id) {
+                case 1:
+                    this.creio = element;
 
-                            this.musicaCredo = this.media.create("/android_asset/www/music/" + this.creio.audio);
-                            this.musicaCredo.play();
-                            this.musicaCredo.pause();
+                    this.musicaCredo = this.media.create("/android_asset/www/music/" + this.creio.audio);
+                    this.musicaCredo.play();
+                    this.musicaCredo.pause();
 
-                            break;
-                        case 2:
-                            this.gloria = element;
+                    break;
+                case 2:
+                    this.gloria = element;
 
-                            this.musicaGloria = this.media.create("/android_asset/www/music/" + this.gloria.audio);
-                            this.musicaGloria.play();
-                            this.musicaGloria.pause();
+                    this.musicaGloria = this.media.create("/android_asset/www/music/" + this.gloria.audio);
+                    this.musicaGloria.play();
+                    this.musicaGloria.pause();
 
-                            break;
-                        case 3:
-                            this.paiNosso = element;
+                    break;
+                case 3:
+                    this.paiNosso = element;
 
-                            this.musicaPaiNosso = this.media.create("/android_asset/www/music/" + this.paiNosso.audio);
-                            this.musicaPaiNosso.play();
-                            this.musicaPaiNosso.pause();
+                    this.musicaPaiNosso = this.media.create("/android_asset/www/music/" + this.paiNosso.audio);
+                    this.musicaPaiNosso.play();
+                    this.musicaPaiNosso.pause();
 
-                            break;
-                        case 4:
-                            this.sinalDaCruz = element;
+                    break;
+                case 4:
+                    this.sinalDaCruz = element;
 
-                            this.musicaSinalCruz = this.musica = this.media.create("/android_asset/www/music/" + this.sinalDaCruz.audio);
-                            this.musicaSinalCruz.play();
-                            this.musicaSinalCruz.pause();
+                    this.musicaSinalCruz = this.musica = this.media.create("/android_asset/www/music/" + this.sinalDaCruz.audio);
+                    this.musicaSinalCruz.play();
+                    this.musicaSinalCruz.pause();
 
-                            break;
-                        case 5:
-                            this.aveMaria = element;
+                    break;
+                case 5:
+                    this.aveMaria = element;
 
-                            this.musicaAveMaria = this.media.create("/android_asset/www/music/" + this.aveMaria.audio);
-                            this.musicaAveMaria.play();
-                            this.musicaAveMaria.pause();
+                    this.musicaAveMaria = this.media.create("/android_asset/www/music/" + this.aveMaria.audio);
+                    this.musicaAveMaria.play();
+                    this.musicaAveMaria.pause();
 
-                            break;
-                        case 6:
-                            this.salveRainha = element;
+                    break;
+                case 6:
+                    this.salveRainha = element;
 
-                            this.musicaSalveRainha = this.media.create("/android_asset/www/music/" + this.salveRainha.audio);
-                            this.musicaSalveRainha.play();
-                            this.musicaSalveRainha.pause();
+                    this.musicaSalveRainha = this.media.create("/android_asset/www/music/" + this.salveRainha.audio);
+                    this.musicaSalveRainha.play();
+                    this.musicaSalveRainha.pause();
 
-                            break;
-                        case 7:
-                            this.fatima = element;
+                    break;
+                case 7:
+                    this.fatima = element;
 
-                            this.musicaFatima = this.media.create("/android_asset/www/music/" + this.fatima.audio);
-                            this.musicaFatima.play();
-                            this.musicaFatima.pause();
+                    this.musicaFatima = this.media.create("/android_asset/www/music/" + this.fatima.audio);
+                    this.musicaFatima.play();
+                    this.musicaFatima.pause();
 
-                            break;
-                    }
+                    break;
+            }
+        });
+        this.oracao = this.sinalDaCruz;
+
+        this.platform.ready().then(() => {
+            this.unSub1 = this.platform.backButton.subscribe(async () => {
+                const alert = await this.alertController.create({
+                    header: 'Alerta',
+                    subHeader: 'Sair do Terço',
+                    message: 'Você deseja realmente sair do terço?',
+                    buttons: [{
+                        text: "Cancelar",
+                        cssClass: "buttonAlerta"
+                    }, {
+                        text: "Sair",
+                        cssClass: "buttonAlerta",
+                        handler: () => {
+                            clearInterval(this.interval);
+                            clearInterval(this.musicaInterval);
+                            this.router.navigateByUrl("/tab/terco");
+                        }
+                    }]
                 });
-                this.oracao = this.sinalDaCruz;
 
-                this.platform.ready().then(() => {
-                    this.platform.backButton.subscribe(() => {
-                        clearInterval(this.interval);
-                        clearInterval(this.musicaInterval);
-                        this.router.navigateByUrl("/tab/terco");
-                    });
-
-
-                })
-            })
+                await alert.present();
+            });
         })
-
     }
 
     ngOnDestroy() {
+        this.unSub1.unsubscribe();
+
         this.musica.stop();
         this.duracao = -1;
         this.tempoMusica = 0;
@@ -208,8 +229,6 @@ export class VerTercoPage implements OnInit, OnDestroy {
             this.musicaInterval = setInterval(() => {
                 this.musica.getCurrentPosition().then(async data => {
                     this.tempoMusica = data;
-
-                    console.log(this.duracao, this.tempoMusica, this.pronto, this.oracao.audio);
 
                     if (this.tempoMusica < 0 && this.pronto) {
                         this.play = false;
@@ -310,7 +329,7 @@ export class VerTercoPage implements OnInit, OnDestroy {
             this.oracao = this.listMisterios[this.contadorMisterio - 1];
             this.misterioPt = this.oracao.oracao;
 
-            this.musica = this.musicaMisterio[this.contadorMisterio - 1];
+            this.musica = this["musicaMisterio" + (this.contadorMisterio - 1)];
         } else if (this.i == 78) {
             this.oracao = this.salveRainha;
 
@@ -461,7 +480,7 @@ export class VerTercoPage implements OnInit, OnDestroy {
                 }
                 this.oracao = this.listMisterios[this.contadorMisterio - 1];
                 this.misterioPt = this.oracao.oracao;
-                this.musica = this.musicaMisterio[this.contadorMisterio - 1];
+                this.musica = this["musicaMisterio" + (this.contadorMisterio - 1)];
             } else if (this.i == 78) {
                 this.oracao = this.salveRainha;
                 this.musica = this.musicaSalveRainha;
