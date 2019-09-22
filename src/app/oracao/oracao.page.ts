@@ -10,6 +10,7 @@ import { NavService } from 'src/services/nav/nav.service';
 })
 export class OracaoPage implements OnInit {
 
+    texto = "";
     listOracoes: Array<any> = new Array();
 
     constructor(private oracoes: OracoesService,
@@ -22,7 +23,7 @@ export class OracaoPage implements OnInit {
 
     abrirOracao(aux) {
         this.nav.data = aux;
-        this.router.navigateByUrl('/ver-oracao');
+        this.router.navigateByUrl('/ver-oracao/' + aux.id);
     }
 
 }

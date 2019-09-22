@@ -6,11 +6,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { VerOracaoPage } from './ver-oracao.page';
+import { OracaoResolverService } from 'src/resolvers/oracao/oracao-resolver.service';
 
 const routes: Routes = [
     {
-        path: '',
-        component: VerOracaoPage
+        path: ':id',
+        component: VerOracaoPage,
+        resolve: { oracao: OracaoResolverService }
     }
 ];
 

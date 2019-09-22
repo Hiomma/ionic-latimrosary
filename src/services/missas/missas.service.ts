@@ -297,4 +297,9 @@ export class MissasService {
     getMissas() {
         return this.missas;
     }
+
+
+    findById(id: number) {
+        return this.missas.find(x => { return x.id == id })
+    }
 }

@@ -21,6 +21,7 @@ export class OracoesService {
             {
                 audio: "credo.mp3",
                 id: 1,
+                imagem: "assets/imgs/igreja.svg",
                 nome: "Credo",
                 nomeLatim: "Credo",
                 oracao: "Creio em Deus Pai todo-poderoso,<br> criador do céu e da terra;<br> e em Jesus Cristo, seu único Filho, Nosso Senhor;<br> que foi concebido pelo poder do Espírito Santo;<br> nasceu na Virgem Maria,<br> padeceu sob Pôncio Pilatos,<br> foi crucificado morto e sepultado;<br> desceu à mansão dos mortos; <br> ressuscitou ao terceiro dia;<br> subiu aos céus,<br> está sentado à direita de Deus Pai todo-poderoso,<br> donde há de vir a julgar os vivos e os mortos;<br> creio no Espírito Santo,<br> na santa Igreja Católica,<br> na comunhão dos santos,<br> na remissão dos pecados,<br> na ressurreição da carne,<br> na vida eterna.<br><br> Amém",
@@ -29,6 +30,7 @@ export class OracoesService {
             {
                 audio: "gloria.mp3",
                 id: 2,
+                imagem: "assets/imgs/espirito-santo.svg",
                 nome: "Glória ao Pai",
                 nomeLatim: "Glória Patri",
                 oracao: "Glória ao Pai <br> e ao Filho <br> e ao Espírito Santo.<br> Como era, no princípio,<br> agora e sempre. <br><br> Amém",
@@ -37,6 +39,7 @@ export class OracoesService {
             {
                 audio: "painosso.mp3",
                 id: 3,
+                imagem: "assets/imgs/pai.svg",
                 nome: "Pai Nosso",
                 nomeLatim: "Pater Noster",
                 oracao: "Pai Nosso que estais nos Céus, <br> santificado seja o vosso Nome, <br> venha a nós o vosso Reino, <br> seja feita a vossa vontade <br>  assim na terra como no Céu. <br> O pão nosso de cada dia nos dai hoje, <br> perdoai-nos as nossas ofensas <br> assim como nós perdoamos a quem nos tem ofendido, <br> e não nos deixeis cair em tentação, <br> mas livrai-nos do Mal. <br><br> Amém",
@@ -45,6 +48,7 @@ export class OracoesService {
             {
                 audio: "fatima.mp3",
                 id: 7,
+                imagem: "assets/imgs/fatima.svg",
                 nome: "Oração de Fátima",
                 nomeLatim: "Oratio Fatima",
                 oracao: "Ó meu bom Jesus,<br> perdoai-nos, livrai-nos do fogo do inferno,<br> levai as almas todas para o céu<br> e socorrei principalmente as que mais precisarem.",
@@ -53,6 +57,7 @@ export class OracoesService {
             {
                 audio: "sinaldacruz.mp3",
                 id: 4,
+                imagem: "assets/imgs/cruz.svg",
                 nome: "Sinal da Cruz",
                 nomeLatim: "Signum Crucis",
                 oracao: "Pelo sinal da santa cruz,<br> livrai-nos, Deus nosso Senhor,<br> dos nossos inimigos.<br><br>  Em nome do Pai,<br> e do Filho<br> e do Espírito Santo.<br> Amém",
@@ -61,6 +66,7 @@ export class OracoesService {
             {
                 audio: "avemaria.mp3",
                 id: 5,
+                imagem: "assets/imgs/maria.svg",
                 nome: "Ave Maria",
                 nomeLatim: "Ave Maria",
                 oracao: "Ave Maria,<br> cheia de graça,<br> o Senhor é convosco,<br> bendita sois vós entre as mulheres<br> e bendito é o fruto do vosso ventre, Jesus.<br> Santa Maria, Mãe de Deus,<br> rogai por nós pecadores,<br> agora e na hora da nossa morte.<br><br> Amém",
@@ -69,6 +75,7 @@ export class OracoesService {
             {
                 audio: "salverainha.mp3",
                 id: 6,
+                imagem: "assets/imgs/coroa.svg",
                 nome: "Salve Rainha",
                 nomeLatim: "Salve Regina",
                 oracao: "Salve, Rainha, Mãe de misericórdia,<br> vida, doçura e esperança nossa, salve!<br> A vós bradamos, os degredados filhos de Eva;<br> a vós suspiramos, gemendo e chorando neste vale de lágrimas.<br> Eia, pois advogada nossa,<br> esses vossos olhos misericordiosos a nós volvei;<br> e depois deste desterro<br> nos mostrai Jesus, bendito fruto do vosso ventre,<br> ó clemente, ó piedosa, ó doce sempre Virgem Maria.<br><br>  Rogai por nós, santa Mãe de Deus.<br>  R: Para que sejamos dignos das promessas de Cristo.",
@@ -104,6 +111,10 @@ export class OracoesService {
     }
 
     getOracoes() {
-        return this.oracoes;
+        return this.oracoes.sort((a, b) => { return a.nomeLatim < b.nomeLatim ? -1 : a.nomeLatim > b.nomeLatim ? 1 : 0; });
+    }
+
+    findById(id: number) {
+        return this.oracoes.find(x => { return x.id == id })
     }
 }

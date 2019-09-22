@@ -6,21 +6,24 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { OracaoPage } from './oracao.page';
+import { PipeModule } from 'src/pipes/pipes.module';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: OracaoPage
-  }
+    {
+        path: '',
+        component: OracaoPage,
+
+    }
 ];
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild(routes)
-  ],
-  declarations: [OracaoPage]
+    imports: [
+        PipeModule,
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        RouterModule.forChild(routes)
+    ],
+    declarations: [OracaoPage]
 })
-export class OracaoPageModule {}
+export class OracaoPageModule { }
