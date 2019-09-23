@@ -5,12 +5,12 @@
     <ion-grid>
         <ion-row>
             <ion-col size="6" *ngFor="let aux of listTercos">
-                <div class="divTerco" (click)="abrirTerco(aux)">
+                <div [ngClass]="aux.isHoje ? 'divTercoHoje' : 'divTerco'" (click)="abrirTerco(aux)">
                     <img class="imagem" [src]="aux.imagem">
-                    <p class="pNome">
+                    <p class='pNome'>
                         {{aux.nomeSimplificado}}
                     </p>
-                    <p class="pDescricao">
+                    <p class='pDescricao'>
                         {{aux.descricao}}
                     </p>
                 </div>

@@ -84,6 +84,7 @@ export class OracoesService {
             {
                 audio: "animachristi.mp3",
                 id: 7,
+                imagem: "assets/imgs/almacristo.svg",
                 nome: "Alma de Cristo",
                 nomeLatim: "Anima Christi",
                 oracao: "Alma de Cristo, santificai-me.<br> Corpo de Cristo, salvai-me.<br>Sangue de Cristo, inebriai-me.<br> Água do lado de Cristo, lavai-me.<br> Paixão de Cristo, confortai-me.<br> Ó bom Jesus, escutai-me.<br> Dentro de Vossas chagas escondei-me.<br> Não permitais que me separe de Vós.<br> Do exército do maligno defendei-me.<br> Na hora da Morte chamai-me.<br> E chamai-me para ir a Vós,<br> para que com Vossos santos Vos louve.<br> pelo séculos dos séculos. <br><br> Ámen.",
@@ -92,6 +93,7 @@ export class OracoesService {
             {
                 audio: "confiteor.mp3",
                 id: 8,
+                imagem: "assets/imgs/confessor.svg",
                 nome: "Confesso",
                 nomeLatim: "Confiteor",
                 oracao: "Confesso a Deus Todo-poderoso,<br>  à bem-aventurada sempre Virgem Maria, <br> ao bem-aventurado Miguel Arcanjo, <br> ao bem-aventurado João Batista, <br> aos santos Apóstolos Pedro e Paulo,<br> e a todos os santos, <br> que pequei muitas vezes por pensamentos, palavras e ações, <br> por minha culpa, minha culpa, minha máxima culpa.<br> Por isso, peço à bem-aventurada sempre Virgem Maria,<br> ao bem-aventurado Miguel Arcanjo,<br>  ao bem-aventurado João Batista, <br> aos santos Apóstolos Pedro e Paulo, <br> e a todos os santos, <br> que oreis por mim a Deus, Nosso Senhor. <br><br>  Amém.",
@@ -100,6 +102,7 @@ export class OracoesService {
             {
                 audio: "venicreator.mp3",
                 id: 9,
+                imagem: "assets/imgs/vemespirito.svg",
                 nome: "Vinde Criador",
                 nomeLatim: "Veni Creator",
                 oracao: "Vinde, Espírito Criador,<br> visitai as almas dos Vossos, <br> enchei de graça celestial, <br> os corações que criastes. <br> Sois o Divino Consolador, <br> o dom do Deus Altíssimo, <br> fonte viva, o fogo, a caridade, <br> a unção dos espirituais. <br> Com os Vossos sete dons, <br> sois o dedo da direita de Deus, <br> Solene promessa do Pai, <br> Inspirando nossas palavras. <br> Acendei a luz nos sentidos; <br> insuflai o amor nos corações, <br> amparai na constante virtude <br> a nossa carne enfraquecida. <br> Afastai para longe o inimigo, <br> Trazei-nos prontamente a paz; <br> Assim guiados por Vós <br> Evitaremos todo o mal. <br> Por Vós explicar-se-á o Pai, <br> E conheceremos o Filho; <br> Dai-nos crer sempre em Vós <br> Espírito do Pai e do Filho. <br> Glória ao Pai, Senhor, <br> Ao Filho que ressuscitou <br> Assim como ao Consolador. <br>  Por todos os séculos. Amém. <br><br>  Amém.",

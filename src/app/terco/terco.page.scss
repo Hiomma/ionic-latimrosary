@@ -1,20 +1,20 @@
-.contentTerco{
+.contentTerco {
     --background: var(--background-escuro);
 }
 
-.imagem{
+.imagem {
     height: 80px;
     margin-top: 10px;
 }
 
-.pTitulo{
+.pTitulo {
     color: #fff;
     font-weight: bolder;
     font-size: 30px;
     margin-left: 10px;
 }
 
-.divTerco{
+.divTerco {
     position: relative;
     border: 1px solid var(--borda-escura);
     border-radius: 10px;
@@ -23,7 +23,7 @@
     background: var(--background-claro);
 }
 
-.pNome{
+.pNome {
     color: #fff;
     font-weight: bold;
     position: absolute;
@@ -31,11 +31,40 @@
     bottom: 12px;
 }
 
-.pDescricao{
+.pDescricao {
     color: #fff;
     font-weight: 100;
     font-size: 12px;
     bottom: 0px;
     position: absolute;
     width: 100%;
+}
+
+.divTercoHoje {
+    @extend .divTerco;
+    animation: piscada 3s infinite;
+}
+
+.pNomeHoje {
+    @extend .pNome;
+    animation: piscada 3s infinite;
+}
+
+.pDescricaoHoje {
+    @extend .pDescricao;
+    animation: piscada 3s infinite;
+}
+
+@keyframes piscada {
+    0% {
+        border: 1px solid var(--borda-escura);
+    }
+
+    50% {
+        border: 1px solid var(--primary);
+    }
+
+    100% {
+        border: 1px solid var(--borda-escura);
+    }
 }

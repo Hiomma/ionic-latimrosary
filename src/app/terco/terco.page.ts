@@ -18,6 +18,18 @@ export class TercoPage implements OnInit {
 
     ngOnInit() {
         this.listTercos = this.tercos.getTercos();
+
+        let date = new Date().getDay();
+
+        if ([0, 3].includes(date)) {
+            this.listTercos[0].isHoje = true;
+        } else if ([2, 5].includes(date)) {
+            this.listTercos[1].isHoje = true;
+        } else if (date == 4) {
+            this.listTercos[2].isHoje = true;
+        } else {
+            this.listTercos[3].isHoje = true;
+        }
     }
 
     abrirTerco(aux) {
