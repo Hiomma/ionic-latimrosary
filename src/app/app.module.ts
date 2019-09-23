@@ -8,9 +8,6 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AngularFireModule } from 'angularfire2';
-import { environment } from '../environments/environment';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { TercosService } from 'src/services/tercos/tercos.service';
 import { OracoesService } from 'src/services/oracoes/oracoes.service';
 import { MisteriosService } from 'src/services/misterios/misterios.service';
@@ -19,12 +16,11 @@ import { Media } from '@ionic-native/media/ngx';
 import { ComponentsModule } from './components/components.module';
 import { StorageService } from 'src/services/storage/storage.service';
 import { IonicStorageModule } from '@ionic/storage';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
 
 @NgModule({
     declarations: [AppComponent],
     imports: [BrowserModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        AngularFirestoreModule,
         ComponentsModule,
         IonicModule.forRoot(),
         IonicStorageModule.forRoot({
@@ -33,6 +29,7 @@ import { IonicStorageModule } from '@ionic/storage';
         }),
         AppRoutingModule],
     providers: [
+        OneSignal,
         StatusBar,
         SplashScreen,
         StorageService,

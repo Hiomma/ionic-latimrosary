@@ -63,7 +63,7 @@ export class VerTercoPage implements OnInit, OnDestroy {
     musicaMisterio4: MediaObject;
     musicaMisterio5: MediaObject;
 
-    private unSub1: Subscription;
+
 
     constructor(private nav: NavService,
         private router: Router,
@@ -149,44 +149,8 @@ export class VerTercoPage implements OnInit, OnDestroy {
             }
         });
         this.oracao = this.sinalDaCruz;
-
-        this.platform.ready().then(() => {
-            this.unSub1 = this.platform.backButton.subscribe(async () => {
-                const alert = await this.alertController.create({
-                    header: 'Alerta',
-                    subHeader: 'Sair do Terço',
-                    message: 'Você deseja realmente sair do terço?',
-                    buttons: [{
-                        text: "Cancelar",
-                        cssClass: "buttonAlerta"
-                    }, {
-                        text: "Sair",
-                        cssClass: "buttonAlerta",
-                        handler: () => {
-                            clearInterval(this.interval);
-                            clearInterval(this.musicaInterval);
-                            this.router.navigateByUrl("/tab/terco");
-                        }
-                    }]
-                });
-
-                await alert.present();
-            });
-        })
     }
 
-    ngOnDestroy() {
-        this.unSub1.unsubscribe();
-
-        this.musica.stop();
-        this.duracao = -1;
-        this.tempoMusica = 0;
-        this.reproduzir = false;
-        this.audio = false;
-        this.traducao = false;
-        clearInterval(this.interval);
-        clearInterval(this.musicaInterval);
-    }
 
     avancarMusica() {
         this.musica.seekTo(this.tempoMusica * 1000);
@@ -329,7 +293,7 @@ export class VerTercoPage implements OnInit, OnDestroy {
             this.oracao = this.listMisterios[this.contadorMisterio - 1];
             this.misterioPt = this.oracao.oracao;
 
-            this.musica = this["musicaMisterio" + (this.contadorMisterio - 1)];
+            this.musica = this["musicaMisterio" + (this.contadorMisterio)];
         } else if (this.i == 78) {
             this.oracao = this.salveRainha;
 
@@ -480,7 +444,7 @@ export class VerTercoPage implements OnInit, OnDestroy {
                 }
                 this.oracao = this.listMisterios[this.contadorMisterio - 1];
                 this.misterioPt = this.oracao.oracao;
-                this.musica = this["musicaMisterio" + (this.contadorMisterio - 1)];
+                this.musica = this["musicaMisterio" + (this.contadorMisterio)];
             } else if (this.i == 78) {
                 this.oracao = this.salveRainha;
                 this.musica = this.musicaSalveRainha;
@@ -496,5 +460,17 @@ export class VerTercoPage implements OnInit, OnDestroy {
                 }
             }
         }
+    }
+
+
+    ngOnDestroy() {
+        this.musica.stop();
+        this.duracao = -1;
+        this.tempoMusica = 0;
+        this.reproduzir = false;
+        this.audio = false;
+        this.traducao = false;
+        clearInterval(this.interval);
+        clearInterval(this.musicaInterval);
     }
 }
