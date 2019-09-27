@@ -12,7 +12,8 @@ export class MissasService {
         this.missas.push(
             {
                 id: 1,
-                nome: "Santa Missa de São Pio V",
+                nome: "São Pio V",
+                imagem: "assets/imgs/tridentina.svg",
                 descricao: "Rito Tridentino/Extraordinário",
                 baloes: [
                     {
@@ -109,7 +110,7 @@ export class MissasService {
                             '<p>S/. Sequentia (vel Inítium) sancti † Evangélii secundum N.</p>' +
                             '<p style="font-weight: bold">T/. Glória Tibi, Dómine.</p></br>' +
                             '<p style="color: #FF6961">Ao final do Evangelho, responde-se:</p>' +
-                            '<p style="font-weight: bold">T/. Laus ttibi, Christe.</p>'
+                            '<p style="font-weight: bold">T/. Laus tibi, Christe.</p>'
                     },
                     {
                         id: 9,
@@ -286,11 +287,11 @@ export class MissasService {
                     }
                 ]
             },
-            {
-                id: 2,
-                nome: "Santa Missa de Paulo VI",
-                descricao: "Atual/Novo Rito"
-            }
+            // {
+            //     id: 2,
+            //     nome: "Santa Missa de Paulo VI",
+            //     descricao: "Atual/Novo Rito"
+            // }
         );
     }
 

@@ -34,7 +34,7 @@ export class MisteriosService {
                 audio: "gloriasegundomisterio.mp3",
                 idTerco: "B8whCeNXQ8A0GjximZLH",
                 oracao: "No segundo mistério contemplemos a Ascensão de Nosso Senhor ao Céu.",
-                oracaoLatim: "Ascensionis mysterium: Iesus caelos ad Patris gloriam ascendit."
+                oracaoLatim: "Ascensionis mysterium: Iesus cælos ad Patris gloriam ascendit."
             },
             {
                 id: 3,
@@ -48,28 +48,28 @@ export class MisteriosService {
                 audio: "gloriaquartomisterio.mp3",
                 idTerco: "B8whCeNXQ8A0GjximZLH",
                 oracao: "No quarto mistério contemplemos a Assunção de Nossa Senhora ao Céu.",
-                oracaoLatim: "Assumptionis Beatae Mariae Virginis mysterium: Assumpta est Maria in caelum."
+                oracaoLatim: "Assumptionis Beatæ Mariæ Virginis mysterium: Assumpta est Maria in cælum."
             },
             {
                 id: 5,
                 audio: "gloriaquintomisterio.mp3",
                 idTerco: "B8whCeNXQ8A0GjximZLH",
                 oracao: "No Quinto Mistério contemplamos a gloriosa coroação de Maria Santíssima como Rainha do Céu e da Terra. ",
-                oracaoLatim: "Glorificationis Beatae Mariae Virginis mysterium: Maria Virgo in caelis regina coronatur."
+                oracaoLatim: "Glorificationis Beatæ Mariæ Virginis mysterium: Maria Virgo in cælis regina coronatur."
             },
             {
                 id: 6,
                 audio: "dorprimeiromisterio.mp3",
                 idTerco: "QZnOa2BlN7QfNo7Wk2K7",
                 oracao: "No primeiro mistério contemplemos a Agonia de Cristo Nosso Senhor, quando suou sangue no Horto.",
-                oracaoLatim: "Agoniae mysterium: Iesus in horto Gethsemani orat."
+                oracaoLatim: "Agoniæ mysterium: Iesus in horto Gethsemani orat."
             },
             {
                 id: 7,
                 audio: "dorsegundomisterio.mp3",
                 idTerco: "QZnOa2BlN7QfNo7Wk2K7",
                 oracao: "No segundo mistério contemplemos a Flagelação de Jesus Cristo atado à coluna.",
-                oracaoLatim: "Flagellationis mysterium: Iesus flagellis caeditur."
+                oracaoLatim: "Flagellationis mysterium: Iesus flagellis cæditur."
             },
             {
                 id: 8,
@@ -83,7 +83,7 @@ export class MisteriosService {
                 audio: "dorquartomisterio.mp3",
                 idTerco: "QZnOa2BlN7QfNo7Wk2K7",
                 oracao: "No quarto mistério contemplemos Jesus Cristo carregando a Cruz para o Calvário.",
-                oracaoLatim: "Viae crucis mysterium: Iesus cruce oneratus Calvariae locum adit."
+                oracaoLatim: "Viæ crucis mysterium: Iesus cruce oneratus Calvariæ locum adit."
             },
             {
                 id: 10,
@@ -104,7 +104,7 @@ export class MisteriosService {
                 audio: "luzsegundomisterio.mp3",
                 idTerco: "QkFcWQqSh98hIpkzSTYN",
                 oracao: "No segundo mistério contemplemos a Auto-revelação de Jesus nas Bodas de Caná.",
-                oracaoLatim: "Nuptiarum in Cana mysterium: Iesus aquam in vinum commutat propter Mariae intercessionem."
+                oracaoLatim: "Nuptiarum in Cana mysterium: Iesus aquam in vinum commutat propter Mariæ intercessionem."
             },
             {
                 id: 13,
@@ -125,14 +125,14 @@ export class MisteriosService {
                 audio: "luzquintomisterio.mp3",
                 idTerco: "QkFcWQqSh98hIpkzSTYN",
                 oracao: "No quinto mistério contemplemos a Instituição da Eucaristia.",
-                oracaoLatim: " Eucharistiae mysterium: Iesus in cenaculo Eucharistiam instituit, corpus ac sanguinem suum nobis donans."
+                oracaoLatim: " Eucharistiæ mysterium: Iesus in cenaculo Eucharistiam instituit, corpus ac sanguinem suum nobis donans."
             },
             {
                 id: 16,
                 audio: "gozosoprimeiromisterio.mp3",
                 idTerco: "tAsMFi6KvGxyC7kAyht2",
                 oracao: "No primeiro mistério contemplemos a Anunciação do Arcanjo São Gabriel à Nossa Senhora.",
-                oracaoLatim: "Incarnationis mysterium: Angelus Gabriel nuntiavit Mariae, Maria concepit de Spiritu Sancto, et verbum caro factum est."
+                oracaoLatim: "Incarnationis mysterium: Angelus Gabriel nuntiavit Mariæ, Maria concepit de Spiritu Sancto, et verbum caro factum est."
             },
             {
                 id: 17,
@@ -153,7 +153,7 @@ export class MisteriosService {
                 audio: "gozosoquartomisterio.mp3",
                 idTerco: "tAsMFi6KvGxyC7kAyht2",
                 oracao: "No Quarto Mistério contemplamos a Apresentação do Menino Jesus no Templo e a Purificação de Nossa Senhora.",
-                oracaoLatim: "Praesentationis mysterium: Iesus in templo praesentatur."
+                oracaoLatim: "Præsentationis mysterium: Iesus in templo præsentatur."
             },
             {
                 id: 20,

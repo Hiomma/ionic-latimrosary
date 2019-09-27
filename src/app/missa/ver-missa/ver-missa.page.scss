@@ -1,0 +1,110 @@
+.contentBalao {
+    --background: var(--background-escuro);
+}
+
+.titulo {
+    width: 100%;
+    position: absolute;
+    top: 10px;
+}
+
+.barra {
+    --background: var(--background-claro) !important;
+}
+
+.buttonMissa {
+    width: 100%;
+    --background: var(--background-claro);
+    font-weight: bolder;
+}
+
+.divVoltar {
+    margin-top: 10px;
+    color: white;
+    text-align: right;
+    overflow: hidden;
+    float: right;
+}
+
+.divBalao {
+    position: relative;
+    border: 1px solid var(--borda-escura);
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    text-align: center;
+    background: var(--background-claro);
+}
+
+.pVoltar {
+    float: right;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.divContent {
+    padding-left: 10px;
+}
+
+.divContador {
+    color: white;
+    font-weight: bold;
+    position: relative;
+    border: 1px solid var(--borda-escura);
+    border-radius: 10px;
+    margin-top: 5px;
+    text-align: center;
+    background: var(--background-claro);
+}
+
+.pTituloMissa {
+    color: white;
+    font-weight: bolder;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: center;
+}
+
+.pSubtituloMissa {
+    color: white;
+    font-weight: 100;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: center;
+    font-size: 15px;
+}
+
+.pTitulo {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 35px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pSubtitulo {
+    font-size: 20px;
+    color: white;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    text-align: center;
+}
+
+.pBalao {
+    margin-top: 30px;
+    color: white;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.pTraducao {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-top: 20px;
+}

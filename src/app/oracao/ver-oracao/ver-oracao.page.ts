@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NavService } from 'src/services/nav/nav.service';
 import { Router } from '@angular/router';
 import { Media, MediaObject } from '@ionic-native/media/ngx';
@@ -10,7 +10,7 @@ import { MenuTercoComponent } from 'src/app/components/menu-terco/menu-terco.com
     templateUrl: './ver-oracao.page.html',
     styleUrls: ['./ver-oracao.page.scss'],
 })
-export class VerOracaoPage implements OnInit {
+export class VerOracaoPage implements OnInit, OnDestroy {
 
     oracao: any;
     reproduzir: boolean = false;
@@ -88,8 +88,13 @@ export class VerOracaoPage implements OnInit {
     }
 
     voltar() {
-        this.musica.pause();
+        this.musica.stop();
         this.router.navigateByUrl("/tab/oracao")
+    }
+
+    ngOnDestroy() {
+        if (this.musica)
+            this.musica.stop();
     }
 
 }

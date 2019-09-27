@@ -1,9 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>VerMissa</ion-title>
-  </ion-toolbar>
+
+    <ion-toolbar class="barra">
+        <ion-title class="titulo">
+            <p class="pTituloMissa">{{missa?.nome}}</p>
+            <p class="pSubtituloMissa">{{missa?.descricao}}</p>
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="sair()">
+                <ion-icon slot="icon-only" style="margin-right: 10px; color: white;" name="exit"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="contentBalao">
+    <div class="divContent">
+        <div>
+            <p class="pTitulo">{{balao?.titulo}}</p>
+        </div>
+
+        <div class="divBalao">
+            <p class="pBalao" [innerHTML]="balao?.conteudo"></p>
+        </div>
+    </div>
 
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar style="--background: var(--background-escuro);">
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <ion-button class="buttonMissa" (click)="voltar()">Voltar</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button class="buttonMissa" (click)="avancar()">Avançar</ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-footer>
